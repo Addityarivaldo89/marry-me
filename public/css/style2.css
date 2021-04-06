@@ -1,0 +1,135 @@
+html , body , *{
+    padding: 0;
+    margin: 10;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+nav{
+    background: #FAEDCD;
+    height: 80px;
+    width: 100%;
+}
+label.main_title{
+    color: #CB997E;
+    font-size: 17px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #CB997E;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+/* Step Form for brides data */
+.content_title{
+    position: absolute;
+    padding-bottom: 10%;
+    width: 677px;
+    height: 44px;
+    left: 33px;
+    top: 85px;
+
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #D4A373;
+}
+#step_form{
+    position: absolute;
+    width: 35%;
+    height: 75%;
+    left: 28%;
+    top: 20%;
+
+    border: 2px solid #CB997E;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+.button{
+    color: #CB997E;
+    padding: 8px ;
+    background-color: white;
+    border: 2px solid #CB997E;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+.btn_grup1{
+    padding-right: 8%;
+}
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+.tab{
+    display: none;
+}
+.tab2{
+    position: relative;
+    width: 70%;
+    height: 5%;
+    padding-top: 15%;
+    left: 5%;
+    top: 30%;
+}
+.form_title{
+    position: absolute;
+    height: 44px;
+    left: 5%;
+    top: 5%;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #D4A373;
+}
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #D4A373;
+  }
+ /* dropzone */

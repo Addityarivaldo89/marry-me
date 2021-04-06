@@ -1,0 +1,366 @@
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color: red;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+.float:hover{
+    background-color: thistle;
+}
+/* display hero or head tittle */
+.section1{
+    background-image: linear-gradient(transparent,#B78E80), url(../img/bg11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.display1{
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 30vh;
+}
+.display1 .display1-title{
+    font-weight: bold;
+    font-size: 80px;
+    font-family: Damion;
+    color: whitesmoke;
+    letter-spacing: 0.5rem;
+}
+.display1 .display1-sub-title{
+    font-weight: lighter;
+    color:whitesmoke;
+}
+
+/* display couple identity */
+.section2{
+    background-image: linear-gradient(rgba(183,142,128, 1.5), transparent), url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display2 .description{
+    font-size: 20px;
+    color: white;
+    font-family: Abril Fatface;
+}
+.display2{
+    min-height: 100vh;
+    padding-top: 8%;
+    padding: 5% 5%;
+}
+.card-img-top{
+    border-radius: 50%;
+    -moz-box-shadow: 0px 8px 15px #ccc;
+    -webkit-box-shadow: 0px 8px 15px #ccc;
+    box-shadow: 0px 8px 15px #ccc;
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius:190px;
+}
+.card{
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    padding-top: 10vh;
+    color: white;
+}
+.row{
+    align-items: center;
+    padding-left: 30vh;
+}
+.card .card-title{
+    font-family: Damion;
+    font-size: 40px;
+}
+.card .card-text{
+    font-family: Abril Fatface;
+}
+
+
+/* countdown */
+.section3{
+    background-image: linear-gradient(transparent, rgba(183,142,128, 1.5)), url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display3{
+    min-height: 100vh;
+}
+.countdown-description{
+    font-family: Damion;
+}
+
+/* gallery*/
+.section4{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(183,142,128, 1.5)), url(../img/Vertical\ Wrinkled\ Paper.jpeg);
+}
+.display4{
+    min-height: 100vh;
+}
+.flexbin{
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: -2.5px;}
+    .flexbin:after{
+        content: '';
+        flex-grow: 99999999;
+        min-width: 300px;
+        height: 0;}
+    .flexbin > *{
+        position: relative;
+        display: block;
+        height: 300px;
+        margin: 2.5px;
+        flex-grow: 1;}
+        .flexbin > * > img{
+            height: 300px;
+            object-fit: cover;
+            max-width: 100%;
+            min-width: 100%;
+            vertical-align: bottom;}
+    .flexbin.flexbin-margin {
+        margin: 2.5px;}
+    @media (max-width: 980px){
+        .flexbin{
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap-reverse;
+            margin: -2.5px;}
+        .flexbin:after{
+            content: '';
+            flex-grow: 99999999;
+            min-width: 150px;
+            height: 0;}
+        .flexbin > *{
+            position: relative;
+            display: block;
+            height: 150px;
+            margin: 2.5px;
+            flex-grow: 1;}
+            .flexbin > * > img {
+                height: 150px;
+                object-fit: contain;
+                max-width: 100%;
+                min-width: 100%;
+                vertical-align: bottom;}
+        .flexbin.flexbin-margin {
+            margin: 2.5px;
+        }
+    }
+    @media (max-width: 400px){
+        .flexbin{
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap;
+            margin: -2.5px;}
+            .flexbin:after{
+                content: '';
+                flex-grow: 99999999;
+                min-width: 100px;
+                height: 0;
+            }
+            .flexbin > *{
+                position: relative;
+                display: block;
+                height: 100px;
+                margin: 2.5px;
+                flex-grow: 1;}
+                .flexbin > * > img {
+                    display: block;
+                    height: 100px;
+                    object-fit: cover;
+                    max-width: 100%;
+                    min-width: 100%;}
+            .flexbin.flexbin-margin{
+                margin: 2.5px;
+            }
+    }
+
+
+/* lokasi */
+.section5{
+    background-color: white;
+    background-image:  linear-gradient(#DFB2A9,transparent) ,url(../img/bg13.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.display5{
+    min-height: 100vh;
+    padding-top: 5%;
+}
+.location-title{
+    font-family: Damion;
+    font-size: 70px;
+    color: #B78E80;
+}
+.location-akad{
+    background-color: transparent;
+}
+.location-resepsi{
+    background-color: transparent;
+}
+.card-title-location{
+    font-family: Damion;
+    font-size: 40px;
+    color: #B78E80;
+}
+.card-body-location{
+    background-color: whitesmoke;
+}
+.card-text-location{
+    font-family: Abril Fatface;
+    font-size: 15px;
+    color: #B78E80;
+}
+
+
+/* media video galeri */
+.section6{
+    background-image:  linear-gradient(#DFB2A9,transparent);
+}
+.display6{
+    min-height: 100vh;
+    padding-top: 10%;
+
+}
+.display6-title{
+    font-family: Damion;
+    color: #B78E80;
+    font-weight: bold;
+}
+@media (max-width: 480px){
+    .display6-title {
+        font-size: 24px;
+    }
+}
+@media (min-width: 768px){
+    .display6-title {
+        font-size: 40px;
+    }
+}
+video{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    border: 5px solid #B78E80;
+}
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/* guestbook */
+.section7{
+    background-image: linear-gradient(transparent, rgba(183,142,128, 1.5)), url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display7{
+    min-height: 100vh;
+    padding-top: 10%;
+}
+.display7 .display7-title{
+    font-family: Damion;
+    font-size: 30%;
+    color: #B78E80;
+    font-weight: bolder;
+}
+.name{
+    text-align: left;
+    color: #B78E80;
+    font-weight: bolder;
+}
+.wish{
+    text-align: left;
+    color: #B78E80;
+    font-weight: bolder;
+}
+.button-kirim .btn{
+    align-items: center;
+    background-color: white;  
+    color: #B78E80;
+    text-decoration: none;
+    width: 100px;
+    
+}
+
+/* review guest book */
+.section8{
+    background-color: white;
+    background-image:  linear-gradient(#DFB2A9,transparent) ,url(../img/bg13.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.display8{
+    min-height: 100vh;
+    padding-top: 5%;
+    padding-left: 10% ;
+}
+.box{
+    text-align: left;
+    width: auto;
+    height: 600px;
+    padding: 10px;
+    color: #74583e;
+}
+.box-2{
+    overflow: auto;
+}
+
+/* footer */
+.section9{
+    background-color: #B78E80;
+    height: 15vh;
+}
+.display9{
+    text-align: center;
+}
+.display9 .content-sec9{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Damion;
+    color: #4c4c4b;
+}
+.display9 .sub-content-sec9{
+    font-weight: lighter;
+    font-size: 30px;
+}

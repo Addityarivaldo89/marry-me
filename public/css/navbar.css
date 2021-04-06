@@ -1,0 +1,25 @@
+/* navbar */
+.navbar-title{
+    color: #C7866A;
+    font-family: Comfortaa;
+    font-size: 20pt;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.navbar{
+    background-color: #DED2C2;
+    padding-left: 3%;
+}
+.collapse{
+    color:#C7866A;
+}
+.button-login .btn{
+    background-color: #C7866A;  
+    color: white;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: transparent;
+    color: #C7866A;
+    border: 3px solid #C7866A;
+}

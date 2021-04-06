@@ -1,0 +1,329 @@
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color: red;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+.float:hover{
+    background-color: thistle;
+}
+/* display hero or head tittle */
+.section1{
+    background-image: linear-gradient(#4c3b71,transparent), url(../img/as3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.display1{
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 30vh;
+}
+.display1 .display1-title{
+    font-weight: bold;
+    font-size: 80px;
+    font-family: playball;
+    color: thistle;
+}
+.display1 .display1-sub-title{
+    font-weight: lighter;
+}
+
+/* display couple identity */
+ 
+.section2{
+    background-image: linear-gradient(transparent,#4c3b71),url(../img/as6.jpeg);
+}
+.display2 .description{
+    font-size: 50px;
+    color: whitesmoke;
+    font-family: Prata;
+}
+.display2{
+    min-height: 100vh;
+    padding-top: 3vh;
+}
+.card{
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    padding-top: 10vh;
+    color: whitesmoke;
+}
+
+.row{
+    align-items: center;
+    padding-left: 30vh;
+}
+.card .card-title{
+    font-family: Playball;
+    font-size: 40px;
+}
+.card .card-text{
+    font-family: Prata;
+}
+
+
+/* countdown */
+.section3{
+    background-image: linear-gradient(rgba(76,59,113, 0.8),rgba(2,31,75, 0.5)), url(../img/bg6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display3{
+    min-height: 100vh;
+}
+.display3-countdown .txt{
+    color: #B39D5A;
+    font-family: Belleza;
+}
+h1{
+    font-weight: normal;
+    letter-spacing: 0,125rem;
+}
+/* location and map */
+.section4{
+    background-image: linear-gradient(rgba(2,31,75, 0.8),rgba(76,59,113, 0.5)),url(../img/as6.jpeg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.display4{
+    min-height: 100vh;
+    padding-top: 10%;
+}
+.display4-title{
+    padding-top: 10%;
+    font-family: Playball;
+    font-weight: bolder;
+    font-size: 30px; 
+}
+@media (max-width: 480px){
+    .display4-title {
+        font-size: 24px;
+    }
+    video{
+        padding-top: 30%;
+        width: 300px;
+    }
+}
+@media (min-width: 768px){
+    .display4-title {
+        font-size: 32px;
+    }
+    video{
+        width: 800px;
+    }
+}
+
+
+/* media video galeri */
+.section5{
+    background-image: linear-gradient(rgba(76,59,113, 1.5),transparent),url(../img/bg9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5%;
+}
+.display5{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+.location .location-title{
+    font-family: Prata;
+    font-weight: bolder;
+    font-size: 30pt;
+}
+.location .location-sub-title{
+    font-family: Playball;
+}
+.img-top{
+    width: 50vh;
+    height: 40vh;
+    border: 5px solid #4c3b71;
+}
+.location-title{
+    font-family: Prata;
+    font-size: 30pt;
+    padding-bottom: 10%;
+}
+.card-location-title{
+    font-family: Playball;
+    font-size: 30pt;
+}
+.card-location-address{
+    font-family: Prata;
+    font-size: 8pt;
+}
+.location-link a{
+    text-decoration: none;
+    color: white;
+}
+/* media foto galeri */
+.section6{
+    background-color: rgba(2,31,75);
+}
+.display6{
+    min-height: 100vh;
+    background-color: wheat;
+}
+.flexbin{
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: -2.5px;}
+    .flexbin:after{
+        content: '';
+        flex-grow: 99999999;
+        min-width: 300px;
+        height: 0;}
+    .flexbin > *{
+        position: relative;
+        display: block;
+        height: 300px;
+        margin: 2.5px;
+        flex-grow: 1;}
+        .flexbin > * > img{
+            height: 300px;
+            object-fit: cover;
+            max-width: 100%;
+            min-width: 100%;
+            vertical-align: bottom;}
+    .flexbin.flexbin-margin {
+        margin: 2.5px;}
+    @media (max-width: 980px){
+        .flexbin{
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap-reverse;
+            margin: -2.5px;}
+        .flexbin:after{
+            content: '';
+            flex-grow: 99999999;
+            min-width: 150px;
+            height: 0;}
+        .flexbin > *{
+            position: relative;
+            display: block;
+            height: 150px;
+            margin: 2.5px;
+            flex-grow: 1;}
+            .flexbin > * > img {
+                height: 150px;
+                object-fit: contain;
+                max-width: 100%;
+                min-width: 100%;
+                vertical-align: bottom;}
+        .flexbin.flexbin-margin {
+            margin: 2.5px;
+        }
+    }
+    @media (max-width: 400px){
+        .flexbin{
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap;
+            margin: -2.5px;}
+            .flexbin:after{
+                content: '';
+                flex-grow: 99999999;
+                min-width: 100px;
+                height: 0;
+            }
+            .flexbin > *{
+                position: relative;
+                display: block;
+                height: 100px;
+                margin: 2.5px;
+                flex-grow: 1;}
+                .flexbin > * > img {
+                    display: block;
+                    height: 100px;
+                    object-fit: cover;
+                    max-width: 100%;
+                    min-width: 100%;}
+            .flexbin.flexbin-margin{
+                margin: 2.5px;
+            }
+    }
+
+/* guestbook */
+.section7{
+    background-image: linear-gradient(rgba(2,31,75, 0.8),transparent),url(../img/as9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display7{
+    min-height: 100vh;
+    padding-top: 10%;
+}
+.display7 .display7-title{
+    font-family: Playball;
+    font-size: 20%;
+    font-weight: bolder;
+}
+.name{
+    text-align: left;
+}
+.wish{
+    text-align: left;
+}
+.button-kirim .btn{
+    align-items: center;
+    background-color: white;  
+    color: #23292E;
+    text-decoration: none;
+    width: 100px;
+}
+
+/* review guest book */
+.section8{
+    background-color: #23292E;
+}
+.display8{
+
+    min-height: 100vh;
+    padding-top: 5%;
+    padding-left: 10% ;
+}
+.box{
+    text-align: left;
+    width: auto;
+    height: 600px;
+    padding: 10px;
+}
+.box-2{
+    overflow: auto;
+}
+
+/* footer */
+.section9{
+    background-color: gray;
+    height: 15vh;
+}
+.display9{
+    text-align: center;
+}
+.display9 .content-sec9{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Dancing Script;
+}
+.display9 .sub-content-sec9{
+    font-weight: lighter;
+    font-size: 25px;
+}

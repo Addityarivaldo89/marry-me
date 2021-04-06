@@ -1,0 +1,343 @@
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color: red;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+.float:hover{
+    background-color: thistle;
+}
+/* display hero or head tittle */
+.section1{
+    background-image: linear-gradient(#F3EAC2,transparent), url(../img/bg10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.display1{
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 30vh;
+}
+.display1 .display1-title{
+    font-weight: bold;
+    font-size: 80px;
+    font-family: Condiment;
+    color: #F3EAC2;
+}
+.display1 .display1-sub-title{
+    font-weight: lighter;
+    color: #283618;
+}
+
+/* display couple identity */
+.section2{
+    background-image: url(../img/putih.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display2 .description{
+    font-size: 20px;
+    color: #B39D5A;
+    font-family: Belleza;
+    padding-bottom: 2%;
+}
+.display2{
+    min-height: 100vh;
+    padding-top: 8%;
+}
+.card{
+    border: none;
+    align-items: center;
+    padding-top: 10vh;
+    color: #B39D5A;
+    background-color: #74583E;
+}
+.row{
+    align-items: center;
+    padding-left: 30vh;
+}
+.card .card-title{
+    font-family: Condiment;
+    font-size: 40px;
+}
+.card .card-text{
+    font-family: Belleza;
+}
+
+
+/* countdown */
+.section3{
+    background-image: url(../img/putih.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display3{
+    min-height: 100vh;
+    padding-top: 5%;
+}
+.location-title{
+    font-family: Condiment;
+    font-size: 70px;
+    color: #74583E;
+}
+iframe{
+    border: 5px solid #283618;
+    height: 200px;
+}
+.location-akad{
+    background-color: transparent;
+}
+.location-resepsi{
+    background-color: transparent;
+}
+.card-title-loaction{
+    font-family: Condiment;
+    font-size: 40px;
+    color: #74583E;
+}
+.card-text-location{
+    font-family: Belleza;
+    font-size: 18px;
+    color: #74583E;
+}
+
+/* location and map */
+.section4{
+    background-image: url(../img/putih.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display4{
+    min-height: 100vh;
+}
+.countdown-title{
+    color: #74583E;
+    font-size: 80px;
+}
+.countdown-sub-title{
+    font-weight: lighter;
+    color: #74583e;
+}
+.countdown-plus{
+    font-family: Condiment;
+    color: #74583E;
+}
+.wedding-countdown{
+    color: #74583E;
+}
+
+/* media video galeri */
+.section5{
+    background-image: url(../img/putih.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display5{
+    min-height: 100vh;
+    background-color: wheat;
+}
+.flexbin{
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: -2.5px;}
+    .flexbin:after{
+        content: '';
+        flex-grow: 99999999;
+        min-width: 300px;
+        height: 0;}
+    .flexbin > *{
+        position: relative;
+        display: block;
+        height: 300px;
+        margin: 2.5px;
+        flex-grow: 1;}
+        .flexbin > * > img{
+            height: 300px;
+            object-fit: cover;
+            max-width: 100%;
+            min-width: 100%;
+            vertical-align: bottom;}
+    .flexbin.flexbin-margin {
+        margin: 2.5px;}
+    @media (max-width: 980px){
+        .flexbin{
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap-reverse;
+            margin: -2.5px;}
+        .flexbin:after{
+            content: '';
+            flex-grow: 99999999;
+            min-width: 150px;
+            height: 0;}
+        .flexbin > *{
+            position: relative;
+            display: block;
+            height: 150px;
+            margin: 2.5px;
+            flex-grow: 1;}
+            .flexbin > * > img {
+                height: 150px;
+                object-fit: contain;
+                max-width: 100%;
+                min-width: 100%;
+                vertical-align: bottom;}
+        .flexbin.flexbin-margin {
+            margin: 2.5px;
+        }
+    }
+    @media (max-width: 400px){
+        .flexbin{
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap;
+            margin: -2.5px;}
+            .flexbin:after{
+                content: '';
+                flex-grow: 99999999;
+                min-width: 100px;
+                height: 0;
+            }
+            .flexbin > *{
+                position: relative;
+                display: block;
+                height: 100px;
+                margin: 2.5px;
+                flex-grow: 1;}
+                .flexbin > * > img {
+                    display: block;
+                    height: 100px;
+                    object-fit: cover;
+                    max-width: 100%;
+                    min-width: 100%;}
+            .flexbin.flexbin-margin{
+                margin: 2.5px;
+            }
+    }
+
+
+/* media foto galeri */
+.section6{
+    background-image: url(../img/putih.JPG);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.display6{
+    min-height: 100vh;
+    padding-top: 10%;
+}
+.display6-title{
+    font-family: Condiment;
+    font-weight: bolder;
+    color: #74583E;
+}
+@media (max-width: 480px){
+    .display6-title {
+        font-size: 24px;
+    }
+    video{
+        padding-top: 30%;
+        width: 300px;
+    }
+}
+@media (min-width: 768px){
+    .display6-title {
+        font-size: 32px;
+    }
+    video{
+        width: 800px;
+    }
+}
+
+/* guestbook */
+.section7{
+    background-image: url(../img/putih.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display7{
+    min-height: 100vh;
+    padding-top: 10%;
+}
+.display7 .display7-title{
+    font-family: Condiment;
+    font-size: 20%;
+    color: #74583e;
+    font-weight: bolder;
+}
+.name{
+    text-align: left;
+    color: #74583e;
+    font-weight: bold;
+    font-family: Playball;
+}
+.wish{
+    text-align: left;
+    color: #74583e;
+    font-weight: bold;
+    font-family: Playball;
+}
+.button-kirim .btn{
+    align-items: center;
+    background-color: white;  
+    color: #74583e;
+    text-decoration: none;
+    width: 100px;
+}
+
+/* review guest book */
+.section8{
+    background-image: url(../img/putih.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.display8{
+
+    min-height: 100vh;
+    padding-top: 5%;
+    padding-left: 10% ;
+}
+.box{
+    text-align: left;
+    width: auto;
+    height: 600px;
+    padding: 10px;
+    color: #74583e;
+}
+.box-2{
+    overflow: auto;
+}
+
+/* footer */
+.section9{
+    background-color: #74583E;
+    height: 15vh;
+}
+.display9{
+    text-align: center;
+}
+.display9 .content-sec9{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Condiment;
+}
+.display9 .sub-content-sec9{
+    font-weight: lighter;
+    font-size: 25px;
+}

@@ -13,9 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <link rel="stylesheet" href="<?= base_url(); ?>/css/login.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/navbar.css">
+    <title>Marry.me</title>
 </head>
 
 <body>
+    <style>
+        body {
+            font-family: 'Monsterrat';
+            font-family: 'Comfortaa';
+        }
+    </style>
 
     <?= $this->renderSection('content'); ?>
 

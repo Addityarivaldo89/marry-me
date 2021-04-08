@@ -13,6 +13,11 @@ class Invitation extends BaseController
         $this->invitationModel = new InvitationModel();
     }
 
+    public function home()
+    {
+        return view('tema/home');
+    }
+
     public function index()
     {
         $authenticate =  \Myth\Auth\Config\Services::authentication();
@@ -21,7 +26,7 @@ class Invitation extends BaseController
             return redirect('login');
         } else {
             $data = [
-                'title' => 'Form Invitation',
+                'title' => 'Form Login',
                 'validation' => \Config\Services::validation()
             ];
 
@@ -191,6 +196,7 @@ class Invitation extends BaseController
             $slug = url_title($this->request->getVar('couple_name'), '-', true);
             $this->invitationModel->save([
                 'id_inv' => $this->request->getVar('id_inv'),
+                'id_users' => $this->request->getVar('id_users'),
                 'invoice' => $this->request->getVar('invoice'),
                 'id_tema' => $this->request->getVar('id_tema'),
                 'couple_name' => $this->request->getVar('couple_name'),
@@ -330,6 +336,7 @@ class Invitation extends BaseController
             $slug = url_title($this->request->getVar('couple_name'), '-', true);
             $this->invitationModel->save([
                 'id_inv' => $this->request->getVar('id_inv'),
+                'id_users' => $this->request->getVar('id_users'),
                 'invoice' => $this->request->getVar('invoice'),
                 'id_tema' => $this->request->getVar('id_tema'),
                 'couple_name' => $this->request->getVar('couple_name'),

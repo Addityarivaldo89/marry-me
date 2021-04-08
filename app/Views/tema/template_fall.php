@@ -9,23 +9,24 @@
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/plugins/fontawesome-free/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-    <link rel="stylesheet" href="assets/css/fall.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/util.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/fall.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/main.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/util.css">
+    itle>Marry.me</title>
 </head>
 
 <body>
     <style>
-        {
+        body {
             font-family: 'Lobster';
             font-family: 'Abril Fatface';
             font-family: Moonwake;
@@ -64,14 +65,14 @@
                         <div class="container">
                             <div class="card-deck">
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="assets/img/fall-cowo.jpeg" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="zoom-out-left" data-aos-delay="800">
+                                    <img class="card-img-top" src="<?= base_url(); ?>/img/fall-cowo.jpeg" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="zoom-out-left" data-aos-delay="800">
                                     <div class="card-body">
                                         <h5 class="card-title-couple" data-aos="fade-down" data-aos-delay="500"> Jojo</h5>
                                         <p class="card-text-couple" data-aos="fade-down" data-aos-delay="700">Son of </br> Father name & Mother Name</p>
                                     </div>
                                 </div>
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="assets/img/fall-cewe.png" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="zoom-out-right" data-aos-delay="800">
+                                    <img class="card-img-top" src="<?= base_url(); ?>/img/fall-cewe.png" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="zoom-out-right" data-aos-delay="800">
                                     <div class="card-body">
                                         <h5 class="card-title-couple" data-aos="fade-down" data-aos-delay="500"> Jeje</h5>
                                         <p class="card-text-couple" data-aos="fade-down" data-aos-delay="700">Daughter of </br> Father name & Mother Name</p>
@@ -90,35 +91,35 @@
         <div class="website-block hero d-flex position-relative text-white text-center py-10 align-items-center">
             <div class="w-100 py-0">
                 <div class="flexbin">
-                    <a href="assets/img/b3.jpg" data-aos="fade-down">
-                        <img src="assets/img/b3.jpg">
+                    <a href="<?= base_url(); ?>/img/b3.jpg" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/b3.jpg">
                     </a>
-                    <a href="assets/img/bg10.jpg" data-aos="fade-down">
-                        <img src="assets/img/bg10.jpg">
+                    <a href="<?= base_url(); ?>/img/bg10.jpg" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/bg10.jpg">
                     </a>
-                    <a href="assets/img/bg9.png" data-aos="fade-down">
-                        <img src="assets/img/bg9.png">
+                    <a href="<?= base_url(); ?>/img/bg9.png" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/bg9.png">
                     </a>
-                    <a href="assets/img/bg6.jpg" data-aos="fade-down">
-                        <img src="assets/img/bg6.jpg">
+                    <a href="<?= base_url(); ?>/img/bg6.jpg" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/bg6.jpg">
                     </a>
-                    <a href="assets/img/bg15.jpg" data-aos="fade-down">
-                        <img src="assets/img/bg15.jpg">
+                    <a href="<?= base_url(); ?>/img/bg15.jpg" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/bg15.jpg">
                     </a>
-                    <a href="assets/img/bg14.jpg" data-aos="fade-down">
-                        <img src="assets/img/bg14.jpg">
+                    <a href="<?= base_url(); ?>/img/bg14.jpg" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/bg14.jpg">
                     </a>
-                    <a href="assets/img/bg16.png" data-aos="fade-down">
-                        <img src="assets/img/bg16.png">
+                    <a href="<?= base_url(); ?>/img/bg16.png" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/bg16.png">
                     </a>
-                    <a href="assets/img/bg17.jpg" data-aos="fade-down">
-                        <img src="assets/img/bg17.jpg">
+                    <a href="<?= base_url(); ?>/img/bg17.jpg" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/bg17.jpg">
                     </a>
-                    <a href="assets/img/bg18.jpg" data-aos="fade-down">
-                        <img src="assets/img/bg18.jpg">
+                    <a href="<?= base_url(); ?>/img/bg18.jpg" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/bg18.jpg">
                     </a>
-                    <a href="assets/img/bg19.jpg" data-aos="fade-down">
-                        <img src="assets/img/bg19.jpg">
+                    <a href="<?= base_url(); ?>/img/bg19.jpg" data-aos="fade-down">
+                        <img src="<?= base_url(); ?>/img/bg19.jpg">
                     </a>
                 </div>
             </div>
@@ -296,17 +297,17 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="<?= base_url(); ?>/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/popper.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/vendor/select2/select2.min.js"></script>
-    <script src="assets/vendor/countdowntime/moment.min.js"></script>
-    <script src="assets/vendor/countdowntime/moment-timezone.min.js"></script>
-    <script src="assets/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-    <script src="assets/vendor/countdowntime/countdowntime.js"></script>
+    <script src="<?= base_url(); ?>/vendor/bootstrap/js/popper.js"></script>
+    <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/select2/select2.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/moment.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/moment-timezone.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/countdowntime.js"></script>
     <script>
         $('.cd100').countdown100({
             /*Set Endtime here*/
@@ -322,7 +323,7 @@
             //go to " http://momentjs.com/timezone/ " to get timezone
         });
     </script>
-    <script src="assets/vendor/tilt/tilt.jquery.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/tilt/tilt.jquery.min.js"></script>
     <script>
         $('.js-tilt').tilt({
             scale: 1.1

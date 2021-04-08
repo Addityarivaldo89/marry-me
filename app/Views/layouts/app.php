@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Invitation Wedding</title>
+    <title>Marry.me</title>
     <?= $this->include('layouts/partials/head'); ?>
 </head>
 

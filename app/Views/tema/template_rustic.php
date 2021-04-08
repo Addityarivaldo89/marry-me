@@ -9,21 +9,22 @@
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/plugins/fontawesome-free/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Condiment&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-    <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/util.css">
-    <link rel="stylesheet" href="assets/css/rustic.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/main.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/util.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/rustic.css">
+    <title>Marry.me</title>
 </head>
 
 <body>
     <style>
-        {
+        body {
             font-family: 'Belleza';
             font-family: 'Condiment';
         }
@@ -60,14 +61,14 @@
                         <div class="container">
                             <div class="card-deck">
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="assets/img/cowoo.jpg" alt="Card image cap" style="width:150px; align-item:center" data-aos="zoom-out-right" data-aos-delay="800">
+                                    <img class="card-img-top" src="<?= base_url(); ?>/img/cowoo.jpg" alt="Card image cap" style="width:150px; align-item:center" data-aos="zoom-out-right" data-aos-delay="800">
                                     <div class="card-body" data-aos="fade-up" data-aos-duration="1000">
                                         <h5 class="card-title">Rauf Al-Ikram</h5>
                                         <p class="card-text">Son of </br> Father name & Mother Name</p>
                                     </div>
                                 </div>
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="assets/img/cewee.jpg" alt="Card image cap" style="width:150px; align-item:center" data-aos="zoom-out-left" data-aos-delay="800">
+                                    <img class="card-img-top" src="<?= base_url(); ?>/img/cewee.jpg" alt="Card image cap" style="width:150px; align-item:center" data-aos="zoom-out-left" data-aos-delay="800">
                                     <div class="card-body" data-aos="fade-up" data-aos-duration="1000">
                                         <h5 class="card-title">Rani Andrawina </h5>
                                         <p class="card-text">Daughter of </br> Father name & Mother Name</p>
@@ -171,32 +172,32 @@
         <div class="website-block gallery d-flex position-relative py-1">
             <div class="w-100 py-0">
                 <div class="flexbin">
-                    <a href="assets/img/as2.jpg" data-aos="zoom-in">
-                        <img src="assets/img/as2.jpg">
+                    <a href="<?= base_url(); ?>/img/as2.jpg" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/as2.jpg">
                     </a>
-                    <a href="assets/img/as3.jpg" data-aos="zoom-in">
-                        <img src="assets/img/as3.jpg">
+                    <a href="<?= base_url(); ?>/img/as3.jpg" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/as3.jpg">
                     </a>
-                    <a href="assets/img/bg9.png" data-aos="zoom-in">
-                        <img src="assets/img/bg9.png">
+                    <a href="<?= base_url(); ?>/img/bg9.png" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/bg9.png">
                     </a>
-                    <a href="assets/img/bg6.jpg" data-aos="zoom-in">
-                        <img src="assets/img/bg6.jpg">
+                    <a href="<?= base_url(); ?>/img/bg6.jpg" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/bg6.jpg">
                     </a>
-                    <a href="assets/img/bg19.jpg" data-aos="zoom-in">
-                        <img src="assets/img/bg19.jpg">
+                    <a href="<?= base_url(); ?>/img/bg19.jpg" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/bg19.jpg">
                     </a>
-                    <a href="assets/img/bg15.jpg" data-aos="zoom-in">
-                        <img src="assets/img/bg15.jpg">
+                    <a href="<?= base_url(); ?>/img/bg15.jpg" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/bg15.jpg">
                     </a>
-                    <a href="assets/img/bg14.jpg" data-aos="zoom-in">
-                        <img src="assets/img/bg14.jpg">
+                    <a href="<?= base_url(); ?>/img/bg14.jpg" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/bg14.jpg">
                     </a>
-                    <a href="assets/img/as7.jpg" data-aos="zoom-in">
-                        <img src="assets/img/as7.jpg">
+                    <a href="<?= base_url(); ?>/img/as7.jpg" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/as7.jpg">
                     </a>
-                    <a href="assets/img/as cowo.jpg" data-aos="zoom-in">
-                        <img src="assets/img/as cowo.jpg">
+                    <a href="<?= base_url(); ?>/img/as cowo.jpg" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/as cowo.jpg">
                     </a>
 
                 </div>
@@ -297,14 +298,14 @@
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/vendor/bootstrap/js/popper.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/vendor/select2/select2.min.js"></script>
-    <script src="assets/vendor/countdowntime/moment.min.js"></script>
-    <script src="assets/vendor/countdowntime/moment-timezone.min.js"></script>
-    <script src="assets/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-    <script src="assets/vendor/countdowntime/countdowntime.js"></script>
+    <script src="<?= base_url(); ?>/js/main.js"></script>
+    <script src="<?= base_url(); ?>/vendor/bootstrap/js/popper.js"></script>
+    <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/select2/select2.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/moment.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/moment-timezone.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/countdowntime.js"></script>
     <script>
         $('.cd100').countdown100({
             /*Set Endtime here*/
@@ -320,7 +321,7 @@
             //go to " http://momentjs.com/timezone/ " to get timezone
         });
     </script>
-    <script src="assets/vendor/tilt/tilt.jquery.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/tilt/tilt.jquery.min.js"></script>
     <script>
         $('.js-tilt').tilt({
             scale: 1.1

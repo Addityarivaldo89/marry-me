@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/css/astronomy.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/css/main.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/css/util.css">
+    <title>Marry.me</title>
 </head>
 
 <body>

@@ -6,7 +6,11 @@
         <div class="row">
             <div class="col-sm-6 login-section-wrapper">
                 <div class="brand-wrapper">
-                    <h1 style="font-weight:bold;">marry.me</h1>
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <a class="navbar-title" href="<?= base_url('/home'); ?>"><b>marry.me</b></a>
+                        </div>
+                    </nav>
                 </div>
                 <div class="login-wrapper my-auto">
                     <h1 class="login-title"><?= lang('Auth.register') ?></h1>

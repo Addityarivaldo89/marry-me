@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="<?= base_url(); ?>/css/user_form2.css">
 
 
-  <title>Form</title>
+  <title>Marry.me</title>
 </head>
 
 <body>
@@ -57,6 +57,7 @@
                             <h2 class="fs-title">Mulai Dengan Tanggal Acara</h2>
                             <input type="date" name="wedding_date" placeholder="" />
                             <input type="hidden" name="invoice" value="<?= date('usidy') ?>" />
+                            <input type="hidden" name="id_users" value="<?= user()->id; ?>" />
                           </div> <input type="button" name="next" class="next action-button" value="Next Step" />
                         </fieldset>
                         <fieldset>
@@ -171,9 +172,7 @@
                               <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
                             </div> <br><br>
                             <div class="row justify-content-center">
-                              <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Tambah Data</button>
-                              </div>
+                              <button type="submit" class="btn btn-primary">Tambah Data</button>
                             </div>
                           </div>
                         </fieldset>

@@ -8,7 +8,7 @@
                 <div class="brand-wrapper">
                     <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                            <a class="navbar-title" href="<?= base_url('/home'); ?>"><b>marry.me</b></a>
+                            <a class="navbar-title" href="<?= base_url('/'); ?>"><b>marry.me</b></a>
                         </div>
                     </nav>
                 </div>

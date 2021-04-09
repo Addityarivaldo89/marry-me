@@ -13,12 +13,12 @@ class Invitation extends BaseController
         $this->invitationModel = new InvitationModel();
     }
 
-    public function home()
+    public function index()
     {
         return view('tema/home');
     }
 
-    public function index()
+    public function beranda()
     {
         $authenticate =  \Myth\Auth\Config\Services::authentication();
         if (!$authenticate->check()) {

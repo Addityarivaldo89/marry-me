@@ -27,7 +27,7 @@
 
  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #F4F4F4;">
    <!-- Brand Logo -->
-   <a href="<?= base_url('/'); ?>" class="brand-link">
+   <a href="<?= base_url('/beranda'); ?>" class="brand-link">
      <img src="<?= base_url(); ?>/image/marry.me.png" class="img-rounded logo" style="height:auto; width: 50%">
    </a>
 
@@ -39,7 +39,7 @@
          <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
          <li class="nav-item">
-           <a href="<?= base_url('/'); ?>" class="nav-link">
+           <a href="<?= base_url('/beranda'); ?>" class="nav-link">
              <i class="nav-icon fas fa-home"></i>
              <p>
                Beranda

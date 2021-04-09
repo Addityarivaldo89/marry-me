@@ -6,7 +6,7 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('auth/login');
+		return view('tema/home');
 	}
 
 	public function register()
@@ -17,5 +17,10 @@ class Home extends BaseController
 	public function user()
 	{
 		return view('user/index');
+	}
+
+	public function beranda()
+	{
+		return view('invitation/dashboard');
 	}
 }

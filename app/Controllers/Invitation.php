@@ -92,7 +92,8 @@ class Invitation extends BaseController
         // } else {
         $data = [
             'title' => 'Detail Invitation',
-            'inv' => $this->invitationModel->getInv($slug)
+            'inv' => $this->invitationModel->getInv($slug),
+            'link' => $this->invitationModel->getYt($slug)
         ];
 
         //jika inv tidak ada di tabel

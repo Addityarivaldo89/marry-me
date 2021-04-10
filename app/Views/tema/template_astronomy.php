@@ -141,9 +141,10 @@
                             "we loved with love that was more than love"
                         </div>
                         <div class="display6-video">
-                            <video width="400" controls>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/BZpUUjEUGnE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </video>
+                            <?php
+                            foreach ($link as $links) : ?>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $links->link_youtube; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -212,6 +213,8 @@
                         <img src="<?= base_url(); ?>/img/as7.jpg">
                     </a>
                     <a href="<?= base_url(); ?>/img/as cowo.jpg" data-aos="zoom-in">
+                        <img src="<?= base_url(); ?>/img/as cowo.jpg">
+                    </a><a href="<?= base_url(); ?>/img/as cowo.jpg" data-aos="zoom-in">
                         <img src="<?= base_url(); ?>/img/as cowo.jpg">
                     </a>
 

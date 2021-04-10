@@ -184,7 +184,8 @@
                                             <div class="form-group">
                                                 <label for="">Link Video Pre-Wedding</label>
                                                 <input type="link" class="form-control" id="" aria-describedby="">
-                                                <small id="" class="form-text text-muted">Upload Videomu di Youtube terlebih dahulu</small>
+                                                <small id="" class="form-text text-muted">Upload Videomu di Youtube terlebih dahulu <br> Contoh : 
+                                                https://youtu.be/<b>iT44pZmor3o</b> <br> Perhatikan Huruf yang dicetak tebal</small>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Simpan</button>
                                         </form>
@@ -208,7 +209,8 @@
                                             <div class="form-group">
                                                 <label for="">Link Video Pre-Wedding</label>
                                                 <input type="link" class="form-control" id="" aria-describedby="">
-                                                <small id="" class="form-text text-muted">Upload Videomu di Youtube terlebih dahulu</small>
+                                                <small id="" class="form-text text-muted">Upload Videomu di Youtube terlebih dahulu <br>
+                                                <b>https://youtu.be/47SpkXg_sYY</b></small>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Simpan</button>
                                         </form>

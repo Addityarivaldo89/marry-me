@@ -21,14 +21,14 @@
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-title" href="<?= base_url('/beranda'); ?>"><b>marry.me</b></a>
+      <a class="navbar-title" href="<?= base_url('/'); ?>"><b>marry.me</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
   </nav>
 
   <section class="section1-form">
-    <div class="c-wrapper c-fixed-components">
+    <div class="c-wrapper c-fixed-components" style="background-color: #C7866A;">
       <div class="container py-0">
         <div class="form-sec1">
           <!-- MultiStep Form -->
@@ -44,20 +44,62 @@
                         <?= csrf_field(); ?>
                         <!-- progressbar -->
                         <ul id="progressbar">
-                          <li class="active" id="account"><strong>Start</strong></li>
+                          <li class="active" id="account"><strong>Tema</strong></li>
                           <li id="personal"><strong>Pasangan</strong></li>
                           <li id="personal"><strong>Acara</strong></li>
-                          <li id="personal"><strong>Tema</strong></li>
-                          <li id="personal"><strong>Alamat</strong></li>
-                          <li id="payment"><strong>Pembayaran</strong></li>
-                          <li id="confirm"><strong>Finish</strong></li>
+                          <li id="personal"><strong>Link Undangan</strong></li>
                         </ul> <!-- fieldsets -->
                         <fieldset>
                           <div class="form-card">
-                            <h2 class="fs-title">Mulai Dengan Tanggal Acara</h2>
-                            <input type="date" name="wedding_date" placeholder="" />
-                            <input type="hidden" name="invoice" value="<?= date('usidy') ?>" />
-                            <input type="hidden" name="id_users" value="<?= user()->id; ?>" />
+                            <h2 class="fs-title">Pilih Tema Undanganmu</h2>
+                            <div class="card-deck">
+                              <div class="card-body">
+                                <div class="card card-success">
+                                  <div class="card-body">
+                                    <div class="row">
+                                      <div class="col-md-12 col-lg-6 col-xl-4">
+                                        <div class="card mb-2">
+                                          <input type="radio" id="template" name="template" value="rustic">
+                                          <a data-toggle="modal" href="#myModal" class="btn btn-primary">Tampil</a>
+                                          <!-- <a class="btn btn-link" id="myBtn" style="font-size: smaller; color:black">Lihat Template</a> -->
+                                        </div>
+                                        <img class="card-img-top" src="<?= base_url(); ?>/image/rustic.png" alt="Dist Photo 2">
+                                      </div>
+                                      <div class="col-md-12 col-lg-6 col-xl-4">
+                                        <div class="card mb-2">
+                                          <input type="radio" id="template" name="template" value="etnic">
+                                          <a data-toggle="modal" href="#myModal2" class="btn btn-primary">Tampil</a>
+                                        </div>
+                                        <img class="card-img-top" src="<?= base_url(); ?>/image/etnic.png" alt="Dist Photo 2">
+                                      </div>
+                                      <div class="col-md-12 col-lg-6 col-xl-4">
+                                        <div class="card mb-2">
+                                          <input type="radio" id="template" name="template" value="astronomy"> 
+                                          <a data-toggle="modal" href="#myModal3" class="btn btn-primary">Tampil</a>                                          
+                                        </div>
+                                        <img class="card-img-top" src="<?= base_url(); ?>/image/astronomy.png" alt="Dist Photo 2">
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-12 col-lg-6 col-xl-4">
+                                        <div class="card mb-2">
+                                          <input type="radio" id="template" name="template" value="rose"> 
+                                          <a data-toggle="modal" href="#myModal4" class="btn btn-primary">Tampil</a>                                          
+                                        </div>
+                                        <img class="card-img-top" src="<?= base_url(); ?>/image/rose.png" alt="Dist Photo 2">
+                                      </div>
+                                      <div class="col-md-12 col-lg-6 col-xl-4">
+                                        <div class="card mb-2">
+                                          <input type="radio" id="template" name="template" value="green">  
+                                          <a data-toggle="modal" href="#myModal5" class="btn btn-primary">Tampil</a>
+                                        </div>
+                                        <img class="card-img-top" src="<?= base_url(); ?>/image/green.png" alt="Dist Photo 2">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>                              
+                            </div>
                           </div> <input type="button" name="next" class="next action-button" value="Next Step" />
                         </fieldset>
                         <fieldset>
@@ -106,22 +148,7 @@
                             <input type="time" name="resepsi_time" placeholder="" />
                             <input type="date" name="resepsi_date" placeholder="" />
                             <input type="maps" name="resepsi_map" placeholder="" />
-                          </div> <input type="button" name="next" class="next action-button" value="Next Step" />
-                        </fieldset>
-                        <fieldset>
-                          <div class="form-card">
-                            <h2 class="fs-title">Pilih Tema Undanganmu</h2>
-                            <div class="row">
-                              <div class="col-3"> <label class="pay">Pilih Tema</label> </div>
-                              <div class="col-9"> <select class="list-dt" id="month" name="id_tema">
-                                  <option value="1">Tema 1</option>
-                                  <option value="2">Tema 2</option>
-                                  <option value="3">Tema 3</option>
-                                  <option value="4">Tema 4</option>
-                                  <option value="5">Tema 5</option>
-                                </select> </div>
-                            </div>
-                          </div> <input type="button" name="next" class="next action-button" value="Next Step" />
+                          </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /><input type="button" name="next" class="next action-button" value="Next Step" />
                         </fieldset>
                         <fieldset>
                           <div class="form-card">
@@ -130,50 +157,9 @@
                             <div class="invalid-feedback">
                               <?= $validation->getError('judul'); ?>
                             </div>
-                          </div> <input type="button" name="next" class="next action-button" value="Next Step" />
-                        </fieldset>
-                        <fieldset>
-                          <div class="form-card">
-                            <h2 class="fs-title">Payment Information</h2>
-                            <div class="radio-group">
-                              <div class='radio' data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></div>
-                              <div class='radio' data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></div> <br>
-                            </div> <label class="pay">Card Holder Name*</label> <input type="text" name="holdername" placeholder="" />
-                            <div class="row">
-                              <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" placeholder="" /> </div>
-                              <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" placeholder="***" /> </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
-                              <div class="col-9"> <select class="list-dt" id="month" name="expmonth">
-                                  <option selected>Month</option>
-                                  <option>January</option>
-                                  <option>February</option>
-                                  <option>March</option>
-                                  <option>April</option>
-                                  <option>May</option>
-                                  <option>June</option>
-                                  <option>July</option>
-                                  <option>August</option>
-                                  <option>September</option>
-                                  <option>October</option>
-                                  <option>November</option>
-                                  <option>December</option>
-                                </select> <select class="list-dt" id="year" name="expyear">
-                                  <option selected>Year</option>
-                                </select> </div>
-                            </div>
-                          </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
-                        </fieldset>
-                        <fieldset>
-                          <div class="form-card">
-                            <h2 class="fs-title text-center">Success !</h2> <br><br>
-                            <div class="row justify-content-center">
-                              <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
-                            </div> <br><br>
-                            <div class="row justify-content-center">
-                              <button type="submit" class="btn btn-primary">Tambah Data</button>
-                            </div>
+                          </div>
+                          <div class="justify-content-center">
+                            <button type="submit" class="btn btn-primary">Tambah Data</button>
                           </div>
                         </fieldset>
                       </form>
@@ -187,6 +173,86 @@
       </div>
     </div>
   </section>
+  <div class="modal" id="myModal" style="width: 100%;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Rustic</h4>
+        </div>
+        <div class="container"></div>
+        <div class="modal-body">    
+          <img src="<?= base_url() ?>/image/rustic.png" name="test" id="test">      
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal2" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">          
+          <h4 class="modal-title">Etnic Modern</h4>
+        </div>
+        <div class="container"></div>
+        <div class="modal-body">
+          <img src="<?= base_url() ?>/image/etnic.png" name="test" id="test">
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal3" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">          
+          <h4 class="modal-title">Astronomy</h4>
+        </div>
+        <div class="container"></div>
+        <div class="modal-body">
+          <img src="<?= base_url() ?>/image/astronomy.png" name="test" id="test">
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal4" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">          
+          <h4 class="modal-title">Rose</h4>
+        </div>
+        <div class="container"></div>
+        <div class="modal-body">
+          <img src="<?= base_url() ?>/image/rose.png" name="test" id="test">
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal5" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">          
+          <h4 class="modal-title">Green</h4>
+        </div>
+        <div class="container"></div>
+        <div class="modal-body">
+          <img src="<?= base_url() ?>/image/green.png" name="test" id="test">
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>          
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- Optional JavaScript; choose one of the two! -->
@@ -236,6 +302,37 @@
         imgPreview.src = e.target.result;
       }
     }
+  </script>
+  <script>
+    $('#openBtn').click(function() {
+      $('#myModal').modal({
+        show: true
+      })
+    });
+    // var modal = document.getElementById("myModal");
+    // var btn = document.getElementById("myBtn");
+    // var span = document.getElementsByClassName("close")[0];
+
+    // btn.onclick = function() {
+    //   modal.style.display = "block";
+    // }
+
+    // var modal2 = document.getElementById("myModal2");
+    // var btn2 = document.getElementById("myBtn2");
+    // btn2.onclick = function() {
+    //   modal2.style.display = "block";
+    // }
+
+
+    // span.onclick = function() {
+    //   modal.style.display = "none";
+    // }
+
+    // window.onclick = function(event) {
+    //   if (event.target == modal) {
+    //     modal.style.display = "none";
+    //   }
+    // }
   </script>
 </body>
 

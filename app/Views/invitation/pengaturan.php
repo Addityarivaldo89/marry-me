@@ -22,7 +22,7 @@
                                 <div class="card-header" id="headingOne">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Hero (judul)
+                                            Judul Undangan
                                         </button>
                                     </h2>
                                 </div>
@@ -106,33 +106,6 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Countdown
-                                        </button>
-                                    </h2>
-                                </div>
-
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p> Bagian ini akan menampilkan proses hitung mundur hingga hari pernikahanmu</p>
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="">Tanggal</label>
-                                                <input type="date" class="form-control" id="" aria-describedby="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="">Jam / Waktu</label>
-                                                <input type="time" class="form-control" id="" aria-describedby="">
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Simpan</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
                                 <div class="card-header" id="headingFour">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -207,41 +180,14 @@
                                         <p> Bagian ini akan menentukan background musik pada undanganmu </p>
                                         <form>
                                             <div class="form-group">
-                                                <label for="">Link Video Pre-Wedding</label>
-                                                <input type="link" class="form-control" id="" aria-describedby="">
-                                                <small id="" class="form-text text-muted">Upload Videomu di Youtube terlebih dahulu <br>
-                                                <b>https://youtu.be/47SpkXg_sYY</b></small>
+                                                <label for="">Upload lagumu</label>
+                                                <input type="file" id="myFile" name="filename">                                                                                        
                                             </div>
                                             <button type="submit" class="btn btn-primary">Simpan</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card">
-                                <div class="card-header" id="headingSeven">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                            Footer
-                                        </button>
-                                    </h2>
-                                </div>
-
-                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p> Bagian ini akan menampilkan pesan dibawah undanganmu </p>
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="">Pesan</label>
-                                                <input type="link" class="form-control" id="" aria-describedby="">
-                                                <small id="" class="form-text text-muted">Contoh : Jojo & Jeje , quotes atau tanggal pernikahan</small>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Simpan</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
 

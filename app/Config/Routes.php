@@ -48,6 +48,7 @@ $routes->get('/invoice', 'Invitation::invoice');
 $routes->get('/form', 'Invitation::form');
 $routes->get('/tema', 'Invitation::tema');
 $routes->get('/gallery/create', 'Invitation::galleryCreate');
+$routes->get('/gallery', 'Gallery::index');
 
 
 $routes->get('/Etnic-Modern', 'Tema::etnic');

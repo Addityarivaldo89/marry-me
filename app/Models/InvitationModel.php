@@ -65,4 +65,9 @@ class InvitationModel extends Model
 
         return $query;
     }
+
+    public function insertGalery($data)
+    {
+        return $this->db->table('invitation')->insert($data);
+    }
 }

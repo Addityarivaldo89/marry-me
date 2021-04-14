@@ -25,3 +25,6 @@
 
 <!-- Ekko Lightbox -->
 <link rel="stylesheet" href="<?= base_url(); ?>/plugins/ekko-lightbox/ekko-lightbox.css">
+
+<!-- jQuery -->
+<script src="<?= base_url(); ?>/plugins/jquery/jquery.min.js"></script>

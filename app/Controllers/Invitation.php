@@ -11,6 +11,7 @@ class Invitation extends BaseController
 
     public function __construct()
     {
+        helper('form');
         $this->invitationModel = new InvitationModel();
         $this->komikModel = new KomikModel();
     }
@@ -102,6 +103,23 @@ class Invitation extends BaseController
                 'dashboard' => $this->invitationModel->getDashboard()
             ];
             return view('invitation/pengaturan', $data);
+        }
+    }
+
+    public function store()
+    {
+        $uploads = $this->request->getFiles();
+
+        if ($uploads) {
+            foreach ($uploads['gambar'] as $img) {
+                $img->move(ROOTPATH . 'public/uploads');
+                $data = [
+                    'gambar' => $img->getName()
+                ];
+                $this->invitationModel->insertGalery($data);
+            }
+            session()->setFlashdata('success', 'Upload successfully');
+            return redirect()->to('/pengaturan');
         }
     }
 

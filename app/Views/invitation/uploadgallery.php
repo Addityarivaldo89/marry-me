@@ -17,10 +17,16 @@
                     <div class="card-header">
                         <h3 class="card-title"><b>Form Upload Foto Gallery</b></h3>
                     </div>
+                    <?php echo form_open_multipart('/invitation/store'); ?>
                     <div class="card-body">
+                        <?php if (!empty(session()->getFlashdata('success'))) { ?>
+                            <div class="alert alert-success">
+                                <?php echo session()->getFlashdata('success'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="block">
                             <label class="button" for="images">Upload Images</label>
-                            <input type="file" id="images[]" multiple />
+                            <input type="file" name="gambar[]" multiple />
                         </div>
                         <form action="/pengaturan">
                             <div class="form-group">
@@ -32,6 +38,7 @@
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
+                    <?php echo form_close(); ?>
                 </div>
                 <!-- /.card -->
             </div>

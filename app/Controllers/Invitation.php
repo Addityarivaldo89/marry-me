@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\InvitationModel;
+use App\Models\KomikModel;
 
 class Invitation extends BaseController
 {
@@ -11,6 +12,7 @@ class Invitation extends BaseController
     public function __construct()
     {
         $this->invitationModel = new InvitationModel();
+        $this->komikModel = new KomikModel();
     }
 
     public function index()
@@ -25,12 +27,23 @@ class Invitation extends BaseController
             session()->set('redirect_url', current_url());
             return redirect('login');
         } else {
-            $data = [
-                'title' => 'Form Login',
-                'validation' => \Config\Services::validation()
-            ];
+            $ada = $this->invitationModel->cekData();
+            if ($ada == false) {
+                $data = [
+                    'title' => 'Form Invitation',
+                    'validation' => \Config\Services::validation()
+                ];
 
-            return view('invitation/dashboard', $data);
+                return view('invitation/form', $data);
+            } else {
+                $data = [
+                    'title' => 'Form Login',
+                    'validation' => \Config\Services::validation(),
+                    'dashboard' => $this->invitationModel->getDashboard()
+                ];
+
+                return view('invitation/dashboard', $data);
+            }
         }
     }
 
@@ -68,7 +81,11 @@ class Invitation extends BaseController
             session()->set('redirect_url', current_url());
             return redirect('login');
         } else {
-            return view('invitation/profile');
+            $data = [
+                'title' => 'My Profile',
+                'dashboard' => $this->invitationModel->getDashboard()
+            ];
+            return view('invitation/profile', $data);
         }
     }
 
@@ -79,8 +96,22 @@ class Invitation extends BaseController
             session()->set('redirect_url', current_url());
             return redirect('login');
         } else {
-            return view('invitation/pengaturan');
+            $data = [
+                'title' => 'Pengaturan',
+                'komik' => $this->komikModel->getKomik(),
+                'dashboard' => $this->invitationModel->getDashboard()
+            ];
+            return view('invitation/pengaturan', $data);
         }
+    }
+
+    public function galleryCreate()
+    {
+        $data = [
+            'title' => 'Daftar komik',
+            'komik' => $this->komikModel->getKomik()
+        ];
+        return view('invitation/uploadgallery');
     }
 
     public function detail($slug)
@@ -202,7 +233,6 @@ class Invitation extends BaseController
                 'id_tema' => $this->request->getVar('id_tema'),
                 'couple_name' => $this->request->getVar('couple_name'),
                 'slug' => $slug,
-                'wedding_date' => $this->request->getVar('wedding_date'),
                 'foto_p' => $namaFotoP,
                 'pria' => $this->request->getVar('pria'),
                 'instagram_p' => $this->request->getVar('instagram_p'),
@@ -225,7 +255,7 @@ class Invitation extends BaseController
 
             session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan.');
 
-            return redirect()->to('/');
+            return redirect()->to('/beranda');
         }
     }
 
@@ -247,7 +277,7 @@ class Invitation extends BaseController
 
             $this->invitationModel->delete($id);
             session()->setFlashdata('pesan', 'Data berhasil dihapus.');
-            return redirect()->to('/');
+            return redirect()->to('/beranda');
         }
     }
 
@@ -365,7 +395,7 @@ class Invitation extends BaseController
 
             session()->setFlashdata('pesan', 'Data Berhasil Diubah.');
 
-            return redirect()->to('/');
+            return redirect()->to('/beranda');
         }
     }
 }

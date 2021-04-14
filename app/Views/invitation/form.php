@@ -59,46 +59,46 @@
                                     <div class="row">
                                       <div class="col-md-12 col-lg-6 col-xl-4">
                                         <div class="card mb-2">
-                                          <input type="radio" id="template" name="template" value="rustic">
-                                          <a data-toggle="modal" href="#myModal" class="btn btn-primary">Tampil</a>
-                                          <!-- <a class="btn btn-link" id="myBtn" style="font-size: smaller; color:black">Lihat Template</a> -->
+                                          <input type="radio" id="id_tema" name="id_tema" value="1">
+                                          <a data-toggle="modal" href="#myModal3" class="btn btn-primary">Tampil</a>
                                         </div>
-                                        <img class="card-img-top" src="<?= base_url(); ?>/image/rustic.png" alt="Dist Photo 2">
+                                        <img class="card-img-top" src="<?= base_url(); ?>/image/astronomy.png" alt="Dist Photo 2">
                                       </div>
                                       <div class="col-md-12 col-lg-6 col-xl-4">
                                         <div class="card mb-2">
-                                          <input type="radio" id="template" name="template" value="etnic">
+                                          <input type="radio" id="id_tema" name="id_tema" value="2">
                                           <a data-toggle="modal" href="#myModal2" class="btn btn-primary">Tampil</a>
                                         </div>
                                         <img class="card-img-top" src="<?= base_url(); ?>/image/etnic.png" alt="Dist Photo 2">
                                       </div>
                                       <div class="col-md-12 col-lg-6 col-xl-4">
                                         <div class="card mb-2">
-                                          <input type="radio" id="template" name="template" value="astronomy"> 
-                                          <a data-toggle="modal" href="#myModal3" class="btn btn-primary">Tampil</a>                                          
-                                        </div>
-                                        <img class="card-img-top" src="<?= base_url(); ?>/image/astronomy.png" alt="Dist Photo 2">
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-md-12 col-lg-6 col-xl-4">
-                                        <div class="card mb-2">
-                                          <input type="radio" id="template" name="template" value="rose"> 
-                                          <a data-toggle="modal" href="#myModal4" class="btn btn-primary">Tampil</a>                                          
-                                        </div>
-                                        <img class="card-img-top" src="<?= base_url(); ?>/image/rose.png" alt="Dist Photo 2">
-                                      </div>
-                                      <div class="col-md-12 col-lg-6 col-xl-4">
-                                        <div class="card mb-2">
-                                          <input type="radio" id="template" name="template" value="green">  
+                                          <input type="radio" id="id_tema" name="id_tema" value="3">
                                           <a data-toggle="modal" href="#myModal5" class="btn btn-primary">Tampil</a>
                                         </div>
                                         <img class="card-img-top" src="<?= base_url(); ?>/image/green.png" alt="Dist Photo 2">
                                       </div>
                                     </div>
+                                    <div class="row">
+                                      <div class="col-md-12 col-lg-6 col-xl-4">
+                                        <div class="card mb-2">
+                                          <input type="radio" id="id_tema" name="id_tema" value="4">
+                                          <a data-toggle="modal" href="#myModal4" class="btn btn-primary">Tampil</a>
+                                        </div>
+                                        <img class="card-img-top" src="<?= base_url(); ?>/image/rose.png" alt="Dist Photo 2">
+                                      </div>
+                                      <div class="col-md-12 col-lg-6 col-xl-4">
+                                        <div class="card mb-2">
+                                          <input type="radio" id="id_tema" name="id_tema" value="5">
+                                          <a data-toggle="modal" href="#myModal" class="btn btn-primary">Tampil</a>
+                                          <!-- <a class="btn btn-link" id="myBtn" style="font-size: smaller; color:black">Lihat Template</a> -->
+                                        </div>
+                                        <img class="card-img-top" src="<?= base_url(); ?>/image/rustic.png" alt="Dist Photo 2">
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>                              
+                              </div>
                             </div>
                           </div> <input type="button" name="next" class="next action-button" value="Next Step" />
                         </fieldset>
@@ -114,6 +114,8 @@
                                   <?= $validation->getError('foto_p'); ?>
                                 </div>
                               </div>
+                              <input type="hidden" name="id_users" value="<?= user()->id; ?>">
+                              <input type="hidden" name="invoice" value="<?= date('usidy') ?>" />
                               <input type="text" name="pria" placeholder="Pengantin Pria" />
                               <input type="text" name="instagram_p" placeholder="@pengantinPria" />
                               <input type="text" name="ayah_p" placeholder="Nama Ayah" />
@@ -141,6 +143,7 @@
                             <h2 class="fs-title">Lokasi Akad Nikah</h2>
                             <input type="text" name="alamat_akad" placeholder="Jl. Kenangan" />
                             <input type="time" name="akad_time" placeholder="" />
+                            <input type="hidden" name="akad_time" placeholder="" />
                             <input type="date" name="akad_date" placeholder="" />
                             <input type="maps" name="akad_map" placeholder="" />
                             <h2 class="fs-title">Lokasi Resepsi Nikah</h2>
@@ -180,8 +183,8 @@
           <h4 class="modal-title">Rustic</h4>
         </div>
         <div class="container"></div>
-        <div class="modal-body">    
-          <img src="<?= base_url() ?>/image/rustic.png" name="test" id="test">      
+        <div class="modal-body">
+          <img src="<?= base_url() ?>/image/rustic.png" name="test" id="test">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -192,7 +195,7 @@
   <div class="modal" id="myModal2" data-backdrop="static">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">          
+        <div class="modal-header">
           <h4 class="modal-title">Etnic Modern</h4>
         </div>
         <div class="container"></div>
@@ -200,7 +203,7 @@
           <img src="<?= base_url() ?>/image/etnic.png" name="test" id="test">
         </div>
         <div class="modal-footer">
-          <a href="#" data-dismiss="modal" class="btn">Close</a>          
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
         </div>
       </div>
     </div>
@@ -208,7 +211,7 @@
   <div class="modal" id="myModal3" data-backdrop="static">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">          
+        <div class="modal-header">
           <h4 class="modal-title">Astronomy</h4>
         </div>
         <div class="container"></div>
@@ -216,7 +219,7 @@
           <img src="<?= base_url() ?>/image/astronomy.png" name="test" id="test">
         </div>
         <div class="modal-footer">
-          <a href="#" data-dismiss="modal" class="btn">Close</a>          
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
         </div>
       </div>
     </div>
@@ -224,7 +227,7 @@
   <div class="modal" id="myModal4" data-backdrop="static">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">          
+        <div class="modal-header">
           <h4 class="modal-title">Rose</h4>
         </div>
         <div class="container"></div>
@@ -232,7 +235,7 @@
           <img src="<?= base_url() ?>/image/rose.png" name="test" id="test">
         </div>
         <div class="modal-footer">
-          <a href="#" data-dismiss="modal" class="btn">Close</a>          
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
         </div>
       </div>
     </div>
@@ -240,7 +243,7 @@
   <div class="modal" id="myModal5" data-backdrop="static">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">          
+        <div class="modal-header">
           <h4 class="modal-title">Green</h4>
         </div>
         <div class="container"></div>
@@ -248,7 +251,7 @@
           <img src="<?= base_url() ?>/image/green.png" name="test" id="test">
         </div>
         <div class="modal-footer">
-          <a href="#" data-dismiss="modal" class="btn">Close</a>          
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
         </div>
       </div>
     </div>

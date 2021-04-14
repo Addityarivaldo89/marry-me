@@ -17,24 +17,26 @@
               <div class="card card-widget widget-user">
                 <!-- Add the bg color to the header using any of the bg-* classes -->
                 <div class="widget-user-header bg-success">
-                  <h3 class="widget-user-username"><?= user()->username; ?></h3>
-                  <h5 class="widget-user-desc">(jojo & jeje)</h5>
+                  <!-- <h6 class="widget-user-username">Selamat Datang, <?= user()->username; ?></h6> -->
+                  <?php foreach ($dashboard as $d) : ?>
+                    <br>
+                    <h3 class="widget-user-username">Happy Wedding, <?= $d->couple_name; ?></h3>
                 </div>
                 <div class="card-footer">
                   <div class="row">
                     <div class="col">
                       <div class="description-block">
-                        <h5 class="description-header">1</h5>
-                        <span class="description-text">Pilihan Template</span>
+                        <h5 class="description-header">Pilihan Template</h5>
+                        <span class="description-text"><?= $d->nama_tema; ?></span>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col">
                       <div class="description-block">
-                        <button class="btn btn-link" type="button">
-                          link undangan
-                        </button>
+                        <a href="<?= base_url(); ?>/inv/<?= $d->slug ?>" class="btn btn-link" target="_blank" type="button">
+                          <?= base_url(); ?>/inv/<?= $d->slug ?>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -44,7 +46,7 @@
                 <div class="col-lg col-6">
                   <div class="small-box bg-light">
                     <div class="inner">
-                      <h3>Rp. </h3>
+                      <h3>Rp<?= $d->harga_tema; ?>,</h3>
                       <p>Tagihan Undanganmu </p>
                     </div>
                     <div class="icon">
@@ -53,6 +55,8 @@
                     <a href="<?= base_url('invoice'); ?>" class="small-box-footer">
                       More info <i class="fas fa-arrow-circle-right"></i>
                     </a>
+                  <?php endforeach; ?>
+
                   </div>
                 </div>
               </div>

@@ -72,22 +72,32 @@
     color: #85856f;
     font-weight: bold;
     padding-bottom: 5%;
-  }
-  .card{
+}
+.card{
     background-color: transparent;
     border: none;
     font-family: Comfortaa;
     text-align: center;
     align-items: center;
-  }
-  .card-title{
+}
+.card-title{
     color: #85856f;
     font-weight: bolder;
-  }
-  .card-text{
+}
+.card-text{
     font-weight: bolder;
     color: #C7866A;
-  }
-  .row{
+}
+.row{
     align-items: center ;
-  }
+}
+
+.section5{
+    background-image: linear-gradient(rgba(233,228,225, 0.8),transparent) ,url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.display-tema{
+    max-height: 100%;
+    padding: 3% 3%;
+}

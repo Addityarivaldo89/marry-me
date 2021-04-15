@@ -185,6 +185,156 @@
     </div>
   </section>
 
+  <section class="section5" id="theme">
+    <div class="website-block hero d-flex position-relative text-white text-center py-10 align-items-center">
+      <div class="container py-0">
+        <div class="display-tema">
+          <div class="container py-2">
+            <h2 class="font-weight-light text-center text-muted py-3">Invitation Wedding Theme</h2>
+          </div>
+          <div class="container py-2">
+
+            <!-- timeline item 1 -->
+            <div class="row no-gutters">
+              <div class="col-sm">
+                <!--spacer-->
+              </div>
+              <!-- timeline item 1 center dot -->
+              <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                  <div class="col">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+              </div>
+              <!-- timeline item 1 event content -->
+              <div class="col-sm py-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="float-right text-muted small">marry.me wedding invitation</div>
+                    <img src="<?= base_url(); ?>/image/etnic.png" class="img-fluid" alt="responsive-image">
+                    <h4 class="card-title text-muted">Etnic Modern</h4>
+                    <p class="card-text">Mengusung tema jawa dengan nuansa biru gelap, undanganmu akan terlihat mewah dan elegan.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/row-->
+            <!-- timeline item 2 -->
+            <div class="row no-gutters">
+              <div class="col-sm py-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="float-right text-muted small">marry.me wedding invitation</div>
+                    <img src="<?= base_url(); ?>/image/rustic.png" class="img-fluid" alt="responsive-image">
+                    <h4 class="card-title text-muted">Rustic</h4>
+                    <p class="card-text">Dengan nuansa coklat akan membuat tampilan undanganmu terasa hangat.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+                <div class="row h-50">
+                  <div class="col">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <!--spacer-->
+              </div>
+            </div>
+            <!--/row-->
+            <!-- timeline item 3 -->
+            <div class="row no-gutters">
+              <div class="col-sm">
+                <!--spacer-->
+              </div>
+              <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+              </div>
+              <div class="col-sm py-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="float-right text-muted">marry.me wedding invitation</div>
+                    <img src="<?= base_url(); ?>/image/astronomy.png" class="img-fluid" alt="responsive-image">
+                    <h4 class="card-title">Astronomy</h4>
+                    <p class="card-text">Tema ini menampilkan warna-warna dimalam hari , dengan taburan bintang akan membuat undanganmu terlihat sangat romantis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/row-->
+            <!-- timeline item 4 -->
+            <div class="row no-gutters">
+              <div class="col-sm py-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="float-right text-muted small">marry.me wedding invitation</div>
+                    <img src="<?= base_url(); ?>/image/rose.png" class="img-fluid" alt="responsive-image">
+                    <h4 class="card-title">Rose</h4>
+                    <p class="card-text">Undangan ini memiliki nuansa yang segar, dengan ornamen bunga mawar serta warna merah muda yang lembut.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+                <div class="row h-50">
+                  <div class="col">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <!--spacer-->
+              </div>
+            </div>
+            <!--/row-->
+            <div class="row no-gutters">
+              <div class="col-sm">
+                <!--spacer-->
+              </div>
+              <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+              </div>
+              <div class="col-sm py-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="float-right text-muted">marry.me wedding invitation</div>
+                    <img src="<?= base_url(); ?>/image/green.png" class="img-fluid" alt="responsive-image">
+                    <h4 class="card-title">Green</h4>
+                    <p class="card-text">Tema ini menggunakan warna utama yaitu hijau, membuat undangan ini memberikan kesan yang menyenangkan namun tetap terlihat cantik.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!--
     <section>

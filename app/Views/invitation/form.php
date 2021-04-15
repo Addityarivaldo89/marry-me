@@ -176,7 +176,7 @@
       </div>
     </div>
   </section>
-  <div class="modal" id="myModal" style="width: 100%;">
+  <div class="modal" id="myModal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -184,7 +184,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/rustic.png" name="test" id="test">
+          <img src="<?= base_url() ?>/image/rustic 2.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -200,7 +200,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/etnic.png" name="test" id="test">
+          <img src="<?= base_url() ?>/image/etnic.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -216,7 +216,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/astronomy.png" name="test" id="test">
+          <img src="<?= base_url() ?>/image/astronomy.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -232,7 +232,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/rose.png" name="test" id="test">
+          <img src="<?= base_url() ?>/image/rose.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -248,7 +248,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/green.png" name="test" id="test">
+          <img src="<?= base_url() ?>/image/green.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>

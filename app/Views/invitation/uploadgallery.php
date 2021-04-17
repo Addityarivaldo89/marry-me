@@ -25,13 +25,17 @@
                             </div>
                         <?php } ?>
                         <div class="block">
-                            <label class="button" for="images">Upload Images</label>
-                            <input type="file" name="gambar[]" multiple />
+                            <label>Upload Images</label>
+                            <input type="file" name="gambar[]" class="form-control" multiple />
+                            <input type="hidden" name="id_users" value="<?= user()->id; ?>">
+                            <?php foreach ($dashboard as $d) : ?>
+                                <input type="hidden" name="slug" value="<?= (old('slug')) ? old('slug') : $d->slug ?>">
+                            <?php endforeach; ?>
                         </div>
                         <form action="/pengaturan">
                             <div class="form-group">
                                 <label for="">Link Video Pre-Wedding</label>
-                                <input type="link" class="form-control" id="" aria-describedby="">
+                                <input type="link" class="form-control" name="link_youtube" id="" aria-describedby="">
                                 <small id="" class="form-text text-muted">Upload Videomu di Youtube terlebih dahulu <br> Contoh :
                                     https://youtu.be/<b>iT44pZmor3o</b> <br> Perhatikan Huruf yang dicetak tebal</small>
                             </div>

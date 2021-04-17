@@ -163,18 +163,20 @@
                         <div class="container">
                             <div class="card-deck">
                                 <div class="card mb-4">
-                                    <iframe class="card-maps-top img-fluid" width="100%" height="100%" src="https://maps.google.com/maps?q=jakart&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
                                     <div class="card-body">
                                         <h4 class="card-title">Akad Nikah</h4>
+                                        <p class="card-text"><?= $inv['akad_time']; ?></p>
                                         <p class="card-text"><?= $inv['alamat_akad']; ?></p>
                                     </div>
+                                    <iframe class="card-maps-top img-fluid" width="100%" height="100%" src="https://maps.google.com/maps?q=<?= $inv['alamat_akad']; ?>&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
                                 </div>
                                 <div class="card mb-4">
-                                    <iframe class="card-maps-top img-fluid" width="100%" height="100%" src="https://maps.google.com/maps?q=jakart&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
                                     <div class="card-body">
                                         <h4 class="card-title">Resepsi</h4>
+                                        <p class="card-text"><?= $inv['resepsi_time']; ?></p>
                                         <p class="card-text"><?= $inv['alamat_resepsi']; ?></p>
                                     </div>
+                                    <iframe class="card-maps-top img-fluid" width="100%" height="100%" src="https://maps.google.com/maps?q=<?= $inv['alamat_resepsi']; ?>&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -188,36 +190,11 @@
         <div class="website-block gallery d-flex position-relative py-1">
             <div class="w-100 py-0">
                 <div class="flexbin">
-                    <a href="<?= base_url(); ?>/img/as2.jpg" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/as2.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/as3.jpg" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/as3.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg9.png" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/bg9.png">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg6.jpg" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/bg6.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg19.jpg" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/bg19.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg15.jpg" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/bg15.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg14.jpg" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/bg14.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/as7.jpg" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/as7.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/as cowo.jpg" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/as cowo.jpg">
-                    </a><a href="<?= base_url(); ?>/img/as cowo.jpg" data-aos="zoom-in">
-                        <img src="<?= base_url(); ?>/img/as cowo.jpg">
-                    </a>
-
+                    <?php foreach ($gallery as $g) : ?>
+                        <a href="<?= base_url(); ?>/uploads/<?= $g->slug; ?>/<?= $g->gambar; ?>" data-aos="zoom-in">
+                            <img src="<?= base_url(); ?>/uploads/<?= $g->slug; ?>/<?= $g->gambar; ?>">
+                        </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -265,6 +242,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="section9">
@@ -297,7 +278,7 @@
             /*Endtime must be > current time*/
             endtimeYear: 0,
             endtimeMonth: 0,
-            endtimeDate: 35,
+            endtimeDate: 5,
             endtimeHours: 18,
             endtimeMinutes: 0,
             endtimeSeconds: 0,

@@ -26,19 +26,7 @@ class InvitationModel extends Model
         return $this->where(['slug' => $slug])->first();
     }
 
-    public function getYt($slug = false)
-    {
-        $this->db = \Config\Database::connect();
-        $this->vlink_youtube = $this->db->table('invitation');
-
-        $builder = $this->vlink_youtube;
-        $builder->select("slug, link_youtube");
-        $builder->where('slug', $slug);
-        $query = $builder->get()->getResult();
-
-        return $query;
-    }
-
+    
     public function getDashboard()
     {
         $this->db = \Config\Database::connect();
@@ -49,7 +37,7 @@ class InvitationModel extends Model
         $builder->join('tema', 'invitation.id_tema = tema.id_tema');
         $builder->where('id_users', user()->id);
         $query = $builder->get()->getResult();
-
+        
         return $query;
     }
 
@@ -68,6 +56,45 @@ class InvitationModel extends Model
 
     public function insertGalery($data)
     {
-        return $this->db->table('invitation')->insert($data);
+        return $this->db->table('gallery')->insert($data);
+    }
+
+    public function getGallery($slug = false)
+    {
+        $this->db = \Config\Database::connect();
+        $this->gallery = $this->db->table('gallery');
+
+        $builder = $this->gallery;
+        $builder->select("*");
+        $builder->where('slug', $slug);
+        $query = $builder->get()->getResult();
+
+        return $query;
+    }
+
+    public function getGalleryDashboard()
+    {
+        $this->db = \Config\Database::connect();
+        $this->gallery = $this->db->table('gallery');
+
+        $builder = $this->gallery;
+        $builder->select("*");
+        $builder->where('id_users', user()->id);
+        $query = $builder->get()->getResult();
+
+        return $query;
+    }
+
+    public function getYt($slug = false)
+    {
+        $this->db = \Config\Database::connect();
+        $this->gallery = $this->db->table('link_yt');
+
+        $builder = $this->gallery;
+        $builder->select("*");
+        $builder->where('slug', $slug);
+        $query = $builder->get()->getResult();
+
+        return $query;
     }
 }

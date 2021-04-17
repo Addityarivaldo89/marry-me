@@ -100,7 +100,7 @@ class Invitation extends BaseController
             $data = [
                 'title' => 'Pengaturan',
                 'komik' => $this->komikModel->getKomik(),
-                'dashboard' => $this->invitationModel->getDashboard()
+                'dashboard' => $this->invitationModel->getDashboard(),
             ];
             return view('invitation/pengaturan', $data);
         }
@@ -112,9 +112,13 @@ class Invitation extends BaseController
 
         if ($uploads) {
             foreach ($uploads['gambar'] as $img) {
-                $img->move(ROOTPATH . 'public/uploads');
+                $slug = $this->request->getVar('slug');
+                $img->move(ROOTPATH . 'public/uploads/' . $slug);
                 $data = [
-                    'gambar' => $img->getName()
+                    'gambar' => $img->getName(),
+                    'slug' => $slug,
+                    'link_youtube' => $this->request->getVar('link_youtube'),
+                    'id_users' => $this->request->getVar('id_users')
                 ];
                 $this->invitationModel->insertGalery($data);
             }
@@ -127,9 +131,10 @@ class Invitation extends BaseController
     {
         $data = [
             'title' => 'Daftar komik',
-            'komik' => $this->komikModel->getKomik()
+            'komik' => $this->komikModel->getKomik(),
+            'dashboard' => $this->invitationModel->getDashboard()
         ];
-        return view('invitation/uploadgallery');
+        return view('invitation/uploadgallery', $data);
     }
 
     public function detail($slug)
@@ -142,7 +147,8 @@ class Invitation extends BaseController
         $data = [
             'title' => 'Detail Invitation',
             'inv' => $this->invitationModel->getInv($slug),
-            'link' => $this->invitationModel->getYt($slug)
+            'link' => $this->invitationModel->getYt($slug),
+            'gallery' => $this->invitationModel->getGallery($slug)
         ];
 
         //jika inv tidak ada di tabel

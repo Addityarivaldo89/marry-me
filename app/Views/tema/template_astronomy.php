@@ -30,7 +30,12 @@
             font-family: 'Prata';
         }
     </style>
-    <a href="#" class="float">
+
+    <audio id="music" controls autoplay hidden>
+        <source src="<?= base_url() ?>\uploads\music\DJ Play for me Kaweni Merry Tiktok Goyang Lemes tiktok.mp3" type="audio/mpeg">
+    </audio>
+
+    <a href="#" class="btn float-end" onclick="document.getElementById('music').play()">
         <i class="fa fa-music my-float"></i>
     </a>
     <!-- section1 : hero or head title -->
@@ -248,6 +253,8 @@
         </div>
     </section>
 
+
+
     <section class="section9">
         <div class="website-block hero d-flex position-relative text-white text-center
     py-10 align-items-center" style="height: 15vh;">
@@ -278,8 +285,8 @@
             /*Endtime must be > current time*/
             endtimeYear: 0,
             endtimeMonth: 0,
-            endtimeDate: 5,
-            endtimeHours: 18,
+            endtimeDate: 0,
+            endtimeHours: 1,
             endtimeMinutes: 0,
             endtimeSeconds: 0,
             timeZone: ""

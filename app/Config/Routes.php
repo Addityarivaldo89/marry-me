@@ -36,6 +36,7 @@ $routes->get('/beranda', 'Invitation::beranda');
 $routes->get('/admin', 'Admin::index', ['filter' => 'role:admin']);
 $routes->get('/admin/index', 'Admin::index', ['filter' => 'role:admin']);
 
+$routes->get('/komik', 'Komik::index');
 $routes->get('/komik/create', 'Komik::create');
 $routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
 $routes->delete('/komik/(:num)', 'Komik::delete/$1');
@@ -47,9 +48,9 @@ $routes->get('/profile', 'Invitation::profile');
 $routes->get('/invoice', 'Invitation::invoice');
 $routes->get('/form', 'Invitation::form');
 $routes->get('/tema', 'Invitation::tema');
-$routes->get('/gallery/create', 'Invitation::galleryCreate');
-$routes->get('/gallery', 'Gallery::index');
 
+$routes->get('/gallery/create', 'Invitation::galleryCreate');
+$routes->delete('/gallery/(:num)', 'Invitation::deleteGallery/$1');
 
 $routes->get('/Etnic-Modern', 'Tema::etnic');
 $routes->get('/Rustic', 'Tema::rustic');

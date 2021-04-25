@@ -2,8 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Models\InvitationModel;
 use App\Models\KomikModel;
+use App\Models\InvitationModel;
+use App\Models\GalleryModel;
 
 class Invitation extends BaseController
 {
@@ -14,6 +15,7 @@ class Invitation extends BaseController
         helper('form');
         $this->invitationModel = new InvitationModel();
         $this->komikModel = new KomikModel();
+        $this->galleryModel = new GalleryModel();
     }
 
     public function index()
@@ -101,6 +103,7 @@ class Invitation extends BaseController
                 'title' => 'Pengaturan',
                 'komik' => $this->komikModel->getKomik(),
                 'dashboard' => $this->invitationModel->getDashboard(),
+                'gallery' => $this->invitationModel->getGalleryDashboard(),
             ];
             return view('invitation/pengaturan', $data);
         }
@@ -120,7 +123,7 @@ class Invitation extends BaseController
                     'link_youtube' => $this->request->getVar('link_youtube'),
                     'id_users' => $this->request->getVar('id_users')
                 ];
-                $this->invitationModel->insertGalery($data);
+                $this->galleryModel->save($data);
             }
             session()->setFlashdata('success', 'Upload successfully');
             return redirect()->to('/pengaturan');
@@ -131,11 +134,13 @@ class Invitation extends BaseController
     {
         $data = [
             'title' => 'Daftar komik',
-            'komik' => $this->komikModel->getKomik(),
+            'link' => $this->invitationModel->getYt(user()->id),
+            'gallery' => $this->invitationModel->getYtPengaturan(),
             'dashboard' => $this->invitationModel->getDashboard()
         ];
         return view('invitation/uploadgallery', $data);
     }
+
 
     public function detail($slug)
     {
@@ -303,6 +308,20 @@ class Invitation extends BaseController
             session()->setFlashdata('pesan', 'Data berhasil dihapus.');
             return redirect()->to('/beranda');
         }
+    }
+
+    public function deleteGallery($id)
+    {
+        $gallery = $this->galleryModel->find($id);
+        //cek jika file gambarnya default.svg
+        if ($gallery['gambar'] != 'default.svg') {
+            //hapus gambar sampe ke akar
+            unlink('uploads/' . $gallery['slug'] . '/' . $gallery['gambar']);
+        }
+
+        $this->galleryModel->delete($id);
+        session()->setFlashdata('pesan', 'Data Berhasil Dihapus.');
+        return redirect()->to('/pengaturan#collapseFive');
     }
 
     public function edit($slug)

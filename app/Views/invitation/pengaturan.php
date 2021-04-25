@@ -46,12 +46,12 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Sub Judul</label>
-                                                    <input type="text" class="form-control" >
+                                                    <input type="text" class="form-control">
                                                     <small id="" class="form-text text-muted">Bisa Tanggal Pernikahan, contoh : 25 . 01 . 2025</small>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Sub Judul 2</label>
-                                                    <input type="text" class="form-control" >
+                                                    <input type="text" class="form-control">
                                                     <small id="" class="form-text text-muted">Bisa quotes atau kata seperti "The wedding", Boleh kosong</small>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Simpan</button>
@@ -153,34 +153,34 @@
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <a href="/gallery/create" class="btn btn-primary my-1">Tambah Foto</a>
+                                                        <a href="/gallery/create" class="btn btn-primary my-1"><i class="fa fa-plus"></i> Gallery & Video</a>
                                                         <?php if (session()->getFlashdata('pesan')) : ?>
                                                             <div class="alert alert-success" role="alert">
                                                                 <?= session()->getFlashdata('pesan'); ?>
                                                             </div>
                                                         <?php endif; ?>
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">#</th>
-                                                                    <th scope="col">Sampul</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <?php $i = 1; ?>
-                                                                <?php foreach ($komik as $k) : ?>
-                                                                    <tr">
-                                                                        <th scope="row"><?= $i++; ?></th>
-                                                                        <td><img src="/img/<?= $k['sampul'] ?>" alt="" width="90px"></td>
-                                                                        </tr>
-                                                                    <?php endforeach; ?>
-                                                            </tbody>
-                                                        </table>
+                                                        <?php echo form_close(); ?>
+                                                        <hr>
+                                                        <div class="form-group flexbin">
+                                                            <label for="">Gallery Uploaded</label><br>
+                                                            <?php foreach ($gallery as $g) : ?>
+                                                                <?= csrf_field(); ?>
+                                                                <img src="/uploads/<?= $g->slug; ?>/<?= $g->gambar; ?>" alt="" width="20%">
+                                                                <form action="/gallery/<?= $g->id; ?>" method="post" class="d-inline mr-3">
+                                                                    <i class="fas fa-arrow-right"></i>
+                                                                    <input type="hidden" name="_method" value="DELETE">
+                                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>
+                                                                </form>
+                                                            <?php endforeach; ?>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Link Youtube</label>
+                                                            <input type="text" class="form-control" value="<?= $g->link_youtube; ?>" disabled>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
 
                                 </div>
 

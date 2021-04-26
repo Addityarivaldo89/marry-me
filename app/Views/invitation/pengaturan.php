@@ -71,11 +71,6 @@
                                         <div class="card-body">
                                             <p> Bagian ini akan identitas kedua pasangan</p>
                                             <form>
-                                                <div class="col-lg-4 pull-lg-8 text-xs-center">
-                                                    <label for="img">Select image:</label>
-                                                    <input type="file" id="img" name="img" accept="image/*" value="<?= (old('foto_p')) ? old('foto_p') : $d->foto_p ?>">
-                                                    </label>
-                                                </div>
                                                 <div class="form-group">
                                                     <label for="">Nama Mempelai Pria</label>
                                                     <input type="text" class="form-control" value="<?= (old('pria')) ? old('pria') : $d->pria ?>">
@@ -91,11 +86,6 @@
                                             </form>
                                             </br>
                                             <form>
-                                                <div class="col-lg-4 pull-lg-8 text-xs-center">
-                                                    <label for="img">Select image:</label>
-                                                    <input type="file" id="img" name="img" accept="image/*">
-                                                    </label>
-                                                </div>
                                                 <div class="form-group">
                                                     <label for="">Nama Mempelai Wanita</label>
                                                     <input type="text" class="form-control" value="<?= (old('wanita')) ? old('wanita') : $d->wanita ?>">
@@ -129,10 +119,12 @@
                                                 <div class="form-group">
                                                     <label for="">Alamat Akad Nikah</label>
                                                     <input type="text" class="form-control" value="<?= (old('alamat_akad')) ? old('alamat_akad') : $d->alamat_akad ?>">
+                                                    <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Alamat Resepsi</label>
                                                     <input type="text" class="form-control" value="<?= (old('alamat_resepsi')) ? old('alamat_resepsi') : $d->alamat_resepsi ?>">
+                                                    <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Simpan</button>
                                             </form>

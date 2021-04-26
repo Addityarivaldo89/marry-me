@@ -141,16 +141,15 @@
                         <fieldset>
                           <div class="form-card">
                             <h2 class="fs-title">Lokasi Akad Nikah</h2>
-                            <input type="text" name="alamat_akad" placeholder="Jl. Kenangan" />
+                            <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
+                            <input type="text" class="mt-1" name="alamat_akad" placeholder="Jl. Kenangan" />
                             <input type="time" name="akad_time" placeholder="" />
-                            <input type="hidden" name="akad_time" placeholder="" />
                             <input type="date" name="akad_date" placeholder="" />
-                            <input type="maps" name="akad_map" placeholder="" />
                             <h2 class="fs-title">Lokasi Resepsi Nikah</h2>
-                            <input type="text" name="alamat_resepsi" placeholder="Jl. Kenangan" />
+                            <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
+                            <input type="text" class="mt-1" name="alamat_resepsi" placeholder="Jl. Kenangan" />
                             <input type="time" name="resepsi_time" placeholder="" />
                             <input type="date" name="resepsi_date" placeholder="" />
-                            <input type="maps" name="resepsi_map" placeholder="" />
                           </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /><input type="button" name="next" class="next action-button" value="Next Step" />
                         </fieldset>
                         <fieldset>
@@ -184,7 +183,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/rustic 2.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
+          <img src="<?= base_url() ?>/image/rustic 2.png" class="img-fluid" alt="responsive-image" name="test" id="test" width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -200,7 +199,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/etnic.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
+          <img src="<?= base_url() ?>/image/etnic.png" class="img-fluid" alt="responsive-image" name="test" id="test" width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -216,7 +215,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/astronomy.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
+          <img src="<?= base_url() ?>/image/astronomy.png" class="img-fluid" alt="responsive-image" name="test" id="test" width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -232,7 +231,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/rose.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
+          <img src="<?= base_url() ?>/image/rose.png" class="img-fluid" alt="responsive-image" name="test" id="test" width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>
@@ -248,7 +247,7 @@
         </div>
         <div class="container"></div>
         <div class="modal-body">
-          <img src="<?= base_url() ?>/image/green.png" class="img-fluid" alt="responsive-image" name="test" id="test"  width="470" height="350">
+          <img src="<?= base_url() ?>/image/green.png" class="img-fluid" alt="responsive-image" name="test" id="test" width="470" height="350">
         </div>
         <div class="modal-footer">
           <a href="#" data-dismiss="modal" class="btn">Close</a>

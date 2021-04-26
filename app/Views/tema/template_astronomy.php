@@ -33,7 +33,7 @@
 
     <audio id="music" controls autoplay hidden>
         <?php foreach ($music as $m) : ?>
-            <source src="<?= base_url() ?>/uploads/<?= $m['slug']; ?>/<?= $m['music']; ?>" type="audio/mpeg">
+            <source src="<?= base_url() ?>/uploads/<?= $m->slug; ?>/<?= $m->music; ?>" type="audio/mpeg">
         <?php endforeach; ?>
     </audio>
 

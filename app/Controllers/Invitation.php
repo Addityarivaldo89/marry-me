@@ -177,7 +177,7 @@ class Invitation extends BaseController
             'inv' => $this->invitationModel->getInv($slug),
             'link' => $this->invitationModel->getYt($slug),
             'gallery' => $this->invitationModel->getGallery($slug),
-            'music' => $this->musicModel->getMusic($slug)
+            'music' => $this->invitationModel->getMusicDashboard($slug)
         ];
 
         //jika inv tidak ada di tabel

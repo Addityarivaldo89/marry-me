@@ -40,18 +40,18 @@
                                             <p> Bagian ini akan berada paling atas pada undangan. Biasanya bisa berisi nama pengantin, tanggal pernikahan ataupun quotes.</p>
                                             <form>
                                                 <div class="form-group">
-                                                    <label for="">Judul</label>
+                                                    <label for="">Nama Kedua Pasangan</label>
                                                     <input type="text" class="form-control" value="<?= (old('couple_name')) ? old('couple_name') : $d->couple_name ?>">
                                                     <small id="" class="form-text text-muted">Masukkan nama kedua pasangan tanpa tanda baca <br> Contoh : Rayhan Evelyn</small>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="">Sub Judul</label>
-                                                    <input type="text" class="form-control">
+                                                    <label for="">Tanggal Pernikahan</label>
+                                                    <input type="date" class="form-control" value="<?= (old('akad_date')) ? old('akad_date') : $d->akad_date ?>">
                                                     <small id="" class="form-text text-muted">Bisa Tanggal Pernikahan, contoh : 25 . 01 . 2025</small>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="">Sub Judul 2</label>
-                                                    <input type="text" class="form-control">
+                                                    <label for="">Sub Judul</label>
+                                                    <input type="text" class="form-control" value="<?= (old('sub_judul')) ? old('sub_judul') : $d->sub_judul ?>">
                                                     <small id="" class="form-text text-muted">Bisa quotes atau kata seperti "The wedding", Boleh kosong</small>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Simpan</button>
@@ -73,7 +73,7 @@
                                             <form>
                                                 <div class="col-lg-4 pull-lg-8 text-xs-center">
                                                     <label for="img">Select image:</label>
-                                                    <input type="file" id="img" name="img" accept="image/*">
+                                                    <input type="file" id="img" name="img" accept="image/*" value="<?= (old('foto_p')) ? old('foto_p') : $d->foto_p ?>">
                                                     </label>
                                                 </div>
                                                 <div class="form-group">
@@ -196,13 +196,40 @@
                                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <p> Bagian ini akan menentukan background musik pada undanganmu </p>
+                                            <?php echo form_open_multipart('/invitation/saveMusic'); ?>
                                             <form>
+                                                <input type="hidden" name="id_users" value="<?= user()->id; ?>">
+                                                <?php foreach ($dashboard as $d) : ?>
+                                                    <input type="hidden" name="slug" value="<?= (old('slug')) ? old('slug') : $d->slug ?>">
+                                                <?php endforeach; ?>
                                                 <div class="form-group">
                                                     <label for="">Upload lagumu</label>
-                                                    <input type="file" id="myFile" name="filename">
+                                                    <input type="file" name="music[]" class="form-control">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Simpan</button>
                                             </form>
+                                            <hr>
+                                            <label class="mt-2" for="">Music Uploaded</label><br>
+                                            <?php foreach ($music as $m) : ?>
+                                                <audio id="music" controls autoplay>
+                                                    <source src="<?= base_url() ?>/uploads/<?= $m->slug; ?>/<?= $m->music; ?>" type="audio/mpeg">
+                                                </audio>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <input type="text" value="<?= $m->music ?>" class="form-control" disabled>
+                                                        <small id="" class="form-text text-muted">Kamu hanya dapat memasukan 1 lagu, <br> Silahkan hapus untuk menguploadnya ulang</small>
+                                                    </div>
+                                                    <div class="col">
+                                                        <form action="/music/<?= $m->id; ?>" method="post" class="d-inline">
+                                                            <i class="fas fa-arrow-right mr-3"></i>
+                                                            <input type="hidden" name="_method" value="DELETE">
+                                                            <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
+
+                                            <?php echo form_close(); ?>
                                         </div>
                                     </div>
                                 </div>

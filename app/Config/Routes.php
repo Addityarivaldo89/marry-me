@@ -52,6 +52,11 @@ $routes->get('/tema', 'Invitation::tema');
 $routes->get('/gallery/create', 'Invitation::galleryCreate');
 $routes->delete('/gallery/(:num)', 'Invitation::deleteGallery/$1');
 
+$routes->get('/music/create', 'Invitation::galleryCreate');
+$routes->delete('/music/(:num)', 'Invitation::deleteMusic/$1');
+
+
+
 $routes->get('/Etnic-Modern', 'Tema::etnic');
 $routes->get('/Rustic', 'Tema::rustic');
 $routes->get('/Astronomy', 'Tema::astronomy');

@@ -9,7 +9,7 @@ class InvitationModel extends Model
     protected $table = 'invitation';
     protected $primaryKey = 'id_inv';
     protected $useTimestamps = true;
-    protected $allowedFields = ['id_inv', 'id_users', 'invoice', 'id_tema', 'couple_name', 'slug', 'foto_p', 'pria', 'instagram_p', 'ayah_p', 'ibu_p', 'foto_w', 'wanita', 'instagram_w', 'ayah_w', 'ibu_w', 'alamat_akad', 'akad_time', 'akad_date', 'akad_map', 'alamat_resepsi', 'resepsi_time', 'resepsi_date', 'resepsi_map', 'link_youtube'];
+    protected $allowedFields = ['id_inv', 'id_users', 'invoice', 'id_tema', 'sub_judul', 'couple_name', 'slug', 'foto_p', 'pria', 'instagram_p', 'ayah_p', 'ibu_p', 'foto_w', 'wanita', 'instagram_w', 'ayah_w', 'ibu_w', 'alamat_akad', 'akad_time', 'akad_date', 'akad_map', 'alamat_resepsi', 'resepsi_time', 'resepsi_date', 'resepsi_map', 'link_youtube'];
 
     // public function __construct() {
     //     $this->db = \Config\Database::connect();
@@ -33,7 +33,7 @@ class InvitationModel extends Model
         $this->invitation = $this->db->table('invitation');
 
         $builder = $this->invitation;
-        $builder->select("id_inv, id_users, tema.nama as nama_tema, tema.harga as harga_tema, invoice, couple_name, slug, foto_p, pria, instagram_p, ayah_p, ibu_p, foto_w, wanita, instagram_w, ayah_w, ibu_w, alamat_akad, akad_time, akad_date, alamat_resepsi, resepsi_time, resepsi_date, resepsi_map, link_youtube");
+        $builder->select("id_inv, id_users, tema.nama as nama_tema, tema.harga as harga_tema, invoice, couple_name, sub_judul, slug, foto_p, pria, instagram_p, ayah_p, ibu_p, foto_w, wanita, instagram_w, ayah_w, ibu_w, alamat_akad, akad_time, akad_date, alamat_resepsi, resepsi_time, resepsi_date, resepsi_map, link_youtube");
         $builder->join('tema', 'invitation.id_tema = tema.id_tema');
         $builder->where('id_users', user()->id);
         $query = $builder->get()->getResult();
@@ -78,6 +78,19 @@ class InvitationModel extends Model
         $this->gallery = $this->db->table('gallery');
 
         $builder = $this->gallery;
+        $builder->select("*");
+        $builder->where('id_users', user()->id);
+        $query = $builder->get()->getResult();
+
+        return $query;
+    }
+
+    public function getMusicDashboard()
+    {
+        $this->db = \Config\Database::connect();
+        $this->music = $this->db->table('music');
+
+        $builder = $this->music;
         $builder->select("*");
         $builder->where('id_users', user()->id);
         $query = $builder->get()->getResult();

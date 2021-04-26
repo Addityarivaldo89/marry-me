@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\KomikModel;
 use App\Models\InvitationModel;
 use App\Models\GalleryModel;
+use App\Models\MusicModel;
 
 class Invitation extends BaseController
 {
@@ -16,6 +17,7 @@ class Invitation extends BaseController
         $this->invitationModel = new InvitationModel();
         $this->komikModel = new KomikModel();
         $this->galleryModel = new GalleryModel();
+        $this->musicModel = new MusicModel();
     }
 
     public function index()
@@ -104,6 +106,7 @@ class Invitation extends BaseController
                 'komik' => $this->komikModel->getKomik(),
                 'dashboard' => $this->invitationModel->getDashboard(),
                 'gallery' => $this->invitationModel->getGalleryDashboard(),
+                'music' => $this->invitationModel->getMusicDashboard(),
             ];
             return view('invitation/pengaturan', $data);
         }
@@ -124,6 +127,26 @@ class Invitation extends BaseController
                     'id_users' => $this->request->getVar('id_users')
                 ];
                 $this->galleryModel->save($data);
+            }
+            session()->setFlashdata('success', 'Upload successfully');
+            return redirect()->to('/pengaturan');
+        }
+    }
+
+    public function saveMusic()
+    {
+        $uploads = $this->request->getFiles();
+
+        if ($uploads) {
+            foreach ($uploads['music'] as $msc) {
+                $slug = $this->request->getVar('slug');
+                $msc->move(ROOTPATH . 'public/uploads/' . $slug);
+                $data = [
+                    'music' => $msc->getName(),
+                    'slug' => $slug,
+                    'id_users' => $this->request->getVar('id_users')
+                ];
+                $this->musicModel->save($data);
             }
             session()->setFlashdata('success', 'Upload successfully');
             return redirect()->to('/pengaturan');
@@ -153,7 +176,8 @@ class Invitation extends BaseController
             'title' => 'Detail Invitation',
             'inv' => $this->invitationModel->getInv($slug),
             'link' => $this->invitationModel->getYt($slug),
-            'gallery' => $this->invitationModel->getGallery($slug)
+            'gallery' => $this->invitationModel->getGallery($slug),
+            'music' => $this->musicModel->getMusic($slug)
         ];
 
         //jika inv tidak ada di tabel
@@ -320,6 +344,20 @@ class Invitation extends BaseController
         }
 
         $this->galleryModel->delete($id);
+        session()->setFlashdata('pesan', 'Data Berhasil Dihapus.');
+        return redirect()->to('/pengaturan#collapseFive');
+    }
+
+    public function deleteMusic($id)
+    {
+        $music = $this->musicModel->find($id);
+        //cek jika file gambarnya default.mp3
+        if ($music['music'] != 'default.mp3') {
+            //hapus gambar sampe ke akar
+            unlink('uploads/' . $music['slug'] . '/' . $music['music']);
+        }
+
+        $this->musicModel->delete($id);
         session()->setFlashdata('pesan', 'Data Berhasil Dihapus.');
         return redirect()->to('/pengaturan#collapseFive');
     }

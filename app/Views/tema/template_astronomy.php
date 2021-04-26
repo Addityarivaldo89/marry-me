@@ -32,7 +32,9 @@
     </style>
 
     <audio id="music" controls autoplay hidden>
-        <source src="<?= base_url() ?>\uploads\music\DJ Play for me Kaweni Merry Tiktok Goyang Lemes tiktok.mp3" type="audio/mpeg">
+        <?php foreach ($music as $m) : ?>
+            <source src="<?= base_url() ?>/uploads/<?= $m['slug']; ?>/<?= $m['music']; ?>" type="audio/mpeg">
+        <?php endforeach; ?>
     </audio>
 
     <a href="#" class="btn float-end" onclick="document.getElementById('music').play()">

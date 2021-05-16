@@ -38,20 +38,42 @@
                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <p> Bagian ini akan berada paling atas pada undangan. Biasanya bisa berisi nama pengantin, tanggal pernikahan ataupun quotes.</p>
-                                            <form>
+                                            <form action="/invitation/cobaUpdate/<?= $d->id_inv; ?>" method="post" enctype="multipart/form-data">
+                                                <div>
+                                                    <input type="hidden" name="id_users" value="<?= $d->id_users; ?>">
+                                                    <input type="hidden" name="id_tema" value="<?= $d->id_tema; ?>">
+                                                    <input type="hidden" name="invoice" value="<?= $d->invoice; ?>">
+                                                    <input type="hidden" name="slug" value="<?= $d->slug; ?>">
+                                                    <input type="hidden" name="foto_p" value="<?= $d->foto_p; ?>">
+                                                    <input type="hidden" name="pria" value="<?= $d->pria; ?>">
+                                                    <input type="hidden" name="instagram_p" value="<?= $d->instagram_p; ?>">
+                                                    <input type="hidden" name="ayah_p" value="<?= $d->ayah_p; ?>">
+                                                    <input type="hidden" name="ibu_p" value="<?= $d->ibu_p; ?>">
+                                                    <input type="hidden" name="foto_w" value="<?= $d->foto_w; ?>">
+                                                    <input type="hidden" name="wanita" value="<?= $d->wanita; ?>">
+                                                    <input type="hidden" name="instagram_w" value="<?= $d->instagram_w; ?>">
+                                                    <input type="hidden" name="ayah_w" value="<?= $d->ayah_w; ?>">
+                                                    <input type="hidden" name="ibu_w" value="<?= $d->ibu_w; ?>">
+                                                    <input type="hidden" name="alamat_akad" value="<?= $d->alamat_akad; ?>">
+                                                    <input type="hidden" name="akad_time" value="<?= $d->akad_time; ?>">
+                                                    <input type="hidden" name="alamat_resepsi" value="<?= $d->alamat_resepsi; ?>">
+                                                    <input type="hidden" name="resepsi_time" value="<?= $d->resepsi_time; ?>">
+                                                    <input type="hidden" name="resepsi_date" value="<?= $d->resepsi_date; ?>">
+                                                    <input type="hidden" name="link_youtube" value="<?= $d->link_youtube; ?>">
+                                                </div>
                                                 <div class="form-group">
                                                     <label for="">Nama Kedua Pasangan</label>
-                                                    <input type="text" class="form-control" value="<?= (old('couple_name')) ? old('couple_name') : $d->couple_name ?>">
+                                                    <input type="text" class="form-control" name="couple_name" value="<?= (old('couple_name')) ? old('couple_name') : $d->couple_name ?>">
                                                     <small id="" class="form-text text-muted">Masukkan nama kedua pasangan tanpa tanda baca <br> Contoh : Rayhan Evelyn</small>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Tanggal Pernikahan</label>
-                                                    <input type="date" class="form-control" value="<?= (old('akad_date')) ? old('akad_date') : $d->akad_date ?>">
+                                                    <input type="date" class="form-control" name="akad_date" value="<?= (old('akad_date')) ? old('akad_date') : $d->akad_date ?>">
                                                     <small id="" class="form-text text-muted">Bisa Tanggal Pernikahan, contoh : 25 . 01 . 2025</small>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Sub Judul</label>
-                                                    <input type="text" class="form-control" value="<?= (old('sub_judul')) ? old('sub_judul') : $d->sub_judul ?>">
+                                                    <input type="text" class="form-control" name="sub_judul" value="<?= (old('sub_judul')) ? old('sub_judul') : $d->sub_judul ?>">
                                                     <small id="" class="form-text text-muted">Bisa quotes atau kata seperti "The wedding", Boleh kosong</small>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Simpan</button>
@@ -70,33 +92,58 @@
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <p> Bagian ini akan identitas kedua pasangan</p>
-                                            <form>
+                                            <form action="/invitation/cobaUpdate/<?= $d->id_inv; ?>" method="post" enctype="multipart/form-data">
+                                                <div>
+                                                    <input type="hidden" name="id_users" value="<?= $d->id_users; ?>">
+                                                    <input type="hidden" name="id_tema" value="<?= $d->id_tema; ?>">
+                                                    <input type="hidden" name="invoice" value="<?= $d->invoice; ?>">
+                                                    <input type="hidden" name="couple_name" value="<?= $d->couple_name; ?>">
+                                                    <input type="hidden" name="sub_judul" value="<?= $d->sub_judul; ?>">
+                                                    <input type="hidden" name="slug" value="<?= $d->slug; ?>">
+                                                    <input type="hidden" name="foto_p" value="<?= $d->foto_p; ?>">
+                                                    <input type="hidden" name="instagram_p" value="<?= $d->instagram_p; ?>">
+                                                    <input type="hidden" name="foto_w" value="<?= $d->foto_w; ?>">
+                                                    <input type="hidden" name="instagram_w" value="<?= $d->instagram_w; ?>">
+                                                    <input type="hidden" name="alamat_akad" value="<?= $d->alamat_akad; ?>">
+                                                    <input type="hidden" name="akad_time" value="<?= $d->akad_time; ?>">
+                                                    <input type="hidden" name="akad_date" value="<?= $d->akad_date; ?>">
+                                                    <input type="hidden" name="alamat_resepsi" value="<?= $d->alamat_resepsi; ?>">
+                                                    <input type="hidden" name="resepsi_time" value="<?= $d->resepsi_time; ?>">
+                                                    <input type="hidden" name="resepsi_date" value="<?= $d->resepsi_date; ?>">
+                                                    <input type="hidden" name="link_youtube" value="<?= $d->link_youtube; ?>">
+                                                </div>
                                                 <div class="form-group">
                                                     <label for="">Nama Mempelai Pria</label>
-                                                    <input type="text" class="form-control" value="<?= (old('pria')) ? old('pria') : $d->pria ?>">
+                                                    <input type="text" class="form-control" name="pria" value="<?= (old('pria')) ? old('pria') : $d->pria ?>">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="">Nama Ayah (Pria)</label>
-                                                    <input type="text" class="form-control" value="<?= (old('ayah_p')) ? old('ayah_p') : $d->ayah_p ?>">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label for="">Nama Ayah (Pria)</label>
+                                                            <input type="text" class="form-control" name="ayah_p" value="<?= (old('ayah_p')) ? old('ayah_p') : $d->ayah_p ?>">
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="">Nama Ibu (Pria)</label>
+                                                            <input type="text" class="form-control" name="ibu_p" value="<?= (old('ibu_p')) ? old('ibu_p') : $d->ibu_p ?>">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="">Nama Ibu (Pria)</label>
-                                                    <input type="text" class="form-control" value="<?= (old('ibu_p')) ? old('ibu_p') : $d->ibu_p ?>">
-                                                </div>
-                                            </form>
-                                            </br>
-                                            <form>
+                                                </br>
                                                 <div class="form-group">
                                                     <label for="">Nama Mempelai Wanita</label>
-                                                    <input type="text" class="form-control" value="<?= (old('wanita')) ? old('wanita') : $d->wanita ?>">
+                                                    <input type="text" class="form-control" name="wanita" value="<?= (old('wanita')) ? old('wanita') : $d->wanita ?>">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="">Nama Ayah (Wanita)</label>
-                                                    <input type="text" class="form-control" value="<?= (old('ayah_w')) ? old('ayah_w') : $d->ayah_w ?>">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="">Nama Ibu (Wanita)</label>
-                                                    <input type="text" class="form-control" value="<?= (old('ibu_p')) ? old('ibu_p') : $d->ibu_p ?>">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label for="">Nama Ayah (Wanita)</label>
+                                                            <input type="text" class="form-control" name="ayah_w" value="<?= (old('ayah_w')) ? old('ayah_w') : $d->ayah_w ?>">
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="">Nama Ibu (Wanita)</label>
+                                                            <input type="text" class="form-control" name="ibu_w" value="<?= (old('ibu_w')) ? old('ibu_w') : $d->ibu_w ?>">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Simpan</button>
                                             </form>
@@ -107,7 +154,7 @@
                                     <div class="card-header" id="headingFour">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                Lokasi
+                                                Lokasi & Tanggal Pernikahan
                                             </button>
                                         </h2>
                                     </div>
@@ -115,16 +162,71 @@
                                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <p> Bagian ini akan menampilkan lokasi akad nikah maupun acara resepsi pernikahanmu</p>
-                                            <form>
+                                            <form action="/invitation/cobaUpdate/<?= $d->id_inv; ?>" method="post" enctype="multipart/form-data">
+                                                <div>
+                                                    <input type="hidden" name="id_users" value="<?= $d->id_users; ?>">
+                                                    <input type="hidden" name="id_tema" value="<?= $d->id_tema; ?>">
+                                                    <input type="hidden" name="invoice" value="<?= $d->invoice; ?>">
+                                                    <input type="hidden" name="couple_name" value="<?= $d->couple_name; ?>">
+                                                    <input type="hidden" name="sub_judul" value="<?= $d->sub_judul; ?>">
+                                                    <input type="hidden" name="slug" value="<?= $d->slug; ?>">
+                                                    <input type="hidden" name="foto_p" value="<?= $d->foto_p; ?>">
+                                                    <input type="hidden" name="pria" value="<?= $d->pria; ?>">
+                                                    <input type="hidden" name="instagram_p" value="<?= $d->instagram_p; ?>">
+                                                    <input type="hidden" name="ayah_p" value="<?= $d->ayah_p; ?>">
+                                                    <input type="hidden" name="ibu_p" value="<?= $d->ibu_p; ?>">
+                                                    <input type="hidden" name="foto_w" value="<?= $d->foto_w; ?>">
+                                                    <input type="hidden" name="wanita" value="<?= $d->wanita; ?>">
+                                                    <input type="hidden" name="instagram_w" value="<?= $d->instagram_w; ?>">
+                                                    <input type="hidden" name="ayah_w" value="<?= $d->ayah_w; ?>">
+                                                    <input type="hidden" name="ibu_w" value="<?= $d->ibu_w; ?>">
+                                                    <input type="hidden" name="alamat_akad" value="<?= $d->alamat_akad; ?>">
+                                                    <input type="hidden" name="akad_time" value="<?= $d->akad_time; ?>">
+                                                    <input type="hidden" name="akad_date" value="<?= $d->akad_date; ?>">
+                                                    <input type="hidden" name="alamat_resepsi" value="<?= $d->alamat_resepsi; ?>">
+                                                    <input type="hidden" name="resepsi_time" value="<?= $d->resepsi_time; ?>">
+                                                    <input type="hidden" name="resepsi_date" value="<?= $d->resepsi_date; ?>">
+                                                    <input type="hidden" name="link_youtube" value="<?= $d->link_youtube; ?>">
+                                                </div>
                                                 <div class="form-group">
                                                     <label for="">Alamat Akad Nikah</label>
-                                                    <input type="text" class="form-control" value="<?= (old('alamat_akad')) ? old('alamat_akad') : $d->alamat_akad ?>">
+                                                    <input type="text" class="form-control" name="alamat_akad" value="<?= (old('alamat_akad')) ? old('alamat_akad') : $d->alamat_akad ?>">
                                                     <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
                                                 </div>
                                                 <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label for="">Tanggal Akad Nikah</label>
+                                                            <input type="date" class="form-control" name="akad_date" value="<?= (old('akad_date')) ? old('akad_date') : $d->akad_date ?>">
+                                                            <small id="" class="form-text text-muted">Masukkan Tanggal akad nikah</small>
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="">Jam Akad Nikah</label>
+                                                            <input type="time" class="form-control" name="akad_time" value="<?= (old('akad_time')) ? old('akad_time') : $d->akad_time ?>">
+                                                            <small id="" class="form-text text-muted">Masukkan jam akad nikah</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
                                                     <label for="">Alamat Resepsi</label>
-                                                    <input type="text" class="form-control" value="<?= (old('alamat_resepsi')) ? old('alamat_resepsi') : $d->alamat_resepsi ?>">
+                                                    <input type="text" class="form-control" name="alamat_resepsi" value="<?= (old('alamat_resepsi')) ? old('alamat_resepsi') : $d->alamat_resepsi ?>">
                                                     <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label for="">Tanggal Resepsi</label>
+                                                            <input type="date" class="form-control" name="resepsi_date" value="<?= (old('resepsi_date')) ? old('resepsi_date') : $d->resepsi_date ?>">
+                                                            <small id="" class="form-text text-muted">Masukkan Tanggal resepsi</small>
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="">Jam Resepsi</label>
+                                                            <input type="time" class="form-control" name="resepsi_time" value="<?= (old('resepsi_time')) ? old('resepsi_time') : $d->resepsi_time ?>">
+                                                            <small id="" class="form-text text-muted">Masukkan nama Jam resepsi</small>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Simpan</button>
                                             </form>
@@ -166,8 +268,11 @@
                                                             <?php endforeach; ?>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="">Link Youtube</label>
-                                                            <input type="text" class="form-control" value="<?= $g->link_youtube; ?>" disabled>
+                                                            <?php foreach ($video as $v) : ?>
+
+                                                                <label for="">Link Youtube</label>
+                                                                <input type="text" class="form-control" value="https://youtu.be/<?= (old('link_youtube')) ? old('link_youtube') : $v->link_youtube; ?>" disabled>
+                                                            <?php endforeach; ?>
                                                         </div>
                                                     </div>
                                                 </div>

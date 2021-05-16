@@ -33,8 +33,17 @@
             src: url(../font/Moonwake/Moonwake.otf);
         }
     </style>
-    <a href="#" class="float">
-        <i class="fa fa-music my-float"></i>
+    <audio id="music" controls autoplay hidden>
+        <?php foreach ($music as $m) : ?>
+            <source src="<?= base_url() ?>/uploads/<?= $m->slug; ?>/<?= $m->music; ?>" type="audio/mpeg">
+        <?php endforeach; ?>
+    </audio>
+
+    <a href="#" class="btn float-end" onclick="document.getElementById('music').play()">
+        <i class="fa fa-volume-up my-float"></i>
+    </a>
+    <a href="#" class="btn float-end" onclick="document.getElementById('music').pause()">
+        <i class="fa fa-volume-off my-float"></i>
     </a>
 
     <!-- header -->
@@ -43,8 +52,8 @@
             <div class="container py-0">
                 <div class="display1">
                     <div class="py-4">
-                        <h3 class="display1-sub-title" data-aos="fade-down" data-aos-delay="500">20 . 01 . 2025</h3>
-                        <h1 class="display1-title" data-aos="zoom-in" data-aos-delay="500">Jojo & Jeje</h1>
+                        <h3 class="display1-sub-title" data-aos="fade-down" data-aos-delay="500"><?= $inv['akad_date']; ?></h3>
+                        <h1 class="display1-title" data-aos="zoom-in" data-aos-delay="500"><?= $inv['couple_name']; ?></h1>
                         <h3 class="display1-quote" data-aos="fade-up" data-aos-delay="500">"when i feel in love it will be forever."</h3>
                     </div>
                 </div>
@@ -65,17 +74,17 @@
                         <div class="container">
                             <div class="card-deck">
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="<?= base_url(); ?>/img/fall-cowo.jpeg" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="zoom-out-left" data-aos-delay="800">
+                                    <img class="card-img-top" src="/img/user-upload/<?= $inv['foto_p']; ?>" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="zoom-out-left" data-aos-delay="800">
                                     <div class="card-body">
-                                        <h5 class="card-title-couple" data-aos="fade-down" data-aos-delay="500"> Jojo</h5>
-                                        <p class="card-text-couple" data-aos="fade-down" data-aos-delay="700">Son of </br> Father name & Mother Name</p>
+                                        <h5 class="card-title-couple" data-aos="fade-down" data-aos-delay="500"><?= $inv['pria']; ?></h5>
+                                        <p class="card-text-couple" data-aos="fade-down" data-aos-delay="700">Son of </br> <?= $inv['ayah_p']; ?> & <?= $inv['ibu_p']; ?></p>
                                     </div>
                                 </div>
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="<?= base_url(); ?>/img/fall-cewe.png" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="zoom-out-right" data-aos-delay="800">
+                                    <img class="card-img-top" src="/img/user-upload/<?= $inv['foto_w']; ?>" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="zoom-out-right" data-aos-delay="800">
                                     <div class="card-body">
-                                        <h5 class="card-title-couple" data-aos="fade-down" data-aos-delay="500"> Jeje</h5>
-                                        <p class="card-text-couple" data-aos="fade-down" data-aos-delay="700">Daughter of </br> Father name & Mother Name</p>
+                                        <h5 class="card-title-couple" data-aos="fade-down" data-aos-delay="500"><?= $inv['wanita']; ?></h5>
+                                        <p class="card-text-couple" data-aos="fade-down" data-aos-delay="700">Daughter of </br> <?= $inv['ayah_w']; ?> & <?= $inv['ibu_w']; ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -91,36 +100,11 @@
         <div class="website-block hero d-flex position-relative text-white text-center py-10 align-items-center">
             <div class="w-100 py-0">
                 <div class="flexbin">
-                    <a href="<?= base_url(); ?>/img/b3.jpg" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/b3.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg10.jpg" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/bg10.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg9.png" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/bg9.png">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg6.jpg" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/bg6.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg15.jpg" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/bg15.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg14.jpg" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/bg14.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg16.png" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/bg16.png">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg17.jpg" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/bg17.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg18.jpg" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/bg18.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg19.jpg" data-aos="fade-down">
-                        <img src="<?= base_url(); ?>/img/bg19.jpg">
-                    </a>
+                    <?php foreach ($gallery as $g) : ?>
+                        <a href="<?= base_url(); ?>/uploads/<?= $g->slug; ?>/<?= $g->gambar; ?>" data-aos="zoom-in">
+                            <img src="<?= base_url(); ?>/uploads/<?= $g->slug; ?>/<?= $g->gambar; ?>">
+                        </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -142,8 +126,9 @@
                                     <h4 class="my-0 location-title" data-aos="fade-down">Akad Nikah</h4>
                                 </div>
                                 <div class="card-body">
-                                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=jakarta%20barat&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" data-aos="zoom-in"></iframe>
-                                    <h1 class="card-title pricing-card-title" data-aos="fade-up">Jl. Gatot Subroto </h1>
+                                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=<?= $inv['alamat_akad']; ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" data-aos="zoom-in"></iframe>
+                                    <p class="card-text"><?= $inv['akad_time']; ?></p>
+                                    <h1 class="card-title pricing-card-title" data-aos="fade-up"><?= $inv['alamat_akad']; ?></h1>
                                 </div>
                             </div>
                             <div class="card mb-4 box-shadow">
@@ -151,8 +136,9 @@
                                     <h4 class="my-0 location-title" data-aos="fade-down">Resepsi</h4>
                                 </div>
                                 <div class="card-body d-flex flex-column">
-                                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=jakarta%20barat&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" data-aos="zoom-in"></iframe>
-                                    <h1 class="card-title pricing-card-title" data-aos="fade-up">Jl. Gatot Subroto </h1>
+                                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=<?= $inv['alamat_resepsi']; ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" data-aos="zoom-in"></iframe>
+                                    <p class="card-text"><?= $inv['resepsi_time']; ?></p>
+                                    <h1 class="card-title pricing-card-title" data-aos="fade-up"><?= $inv['alamat_resepsi']; ?></h1>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +156,7 @@
                         <div class="size1 flex-w flex-c-m p-t-55 p-b-55 p-l-15 p-r-15">
                             <div class="wsize1">
                                 <h3 class="countdown-sub-title" data-aos="fade-down">
-                                    20 . 01 . 2025
+                                    <?= $inv['akad_date']; ?>
                                 </h3>
                                 <h3 class="l1-txt1 txt-center p-b-20" style="font-family: Abril Fatface;" data-aos="zoom-in">
                                     Our Special Day
@@ -224,9 +210,10 @@
                             "we loved with love that was more than love"
                         </div>
                         <div class="display6-video">
-                            <video width="400" controls>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/BZpUUjEUGnE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </video>
+                            <?php
+                            foreach ($link as $links) : ?>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $links->link_youtube; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -242,14 +229,21 @@
                         <h1> Guestbook </h1>
                     </div>
 
-                    <form method="post">
+                    <form action="/invitation/tamuCreate" method="post" enctype="multipart/form-data">
+                        <?= csrf_field(); ?>
+
+                        <input type="hidden" name="id_users" value="<?= user()->id; ?>">
+                        <?php foreach ($link as $d) : ?>
+                            <input type="hidden" name="slug" value="<?= (old('slug')) ? old('slug') : $d->slug ?>">
+                        <?php endforeach; ?>
+
                         <div class="form-group">
                             <div class="name"><label for="name">Nama Tamu</label></div>
-                            <input type="text" name="name" value="guest_name" class="form-control" id="exampleFormControlInput1" placeholder="Diva Farhani (Rekan Kerja)">
+                            <input type="text" name="nama_tamu" value="guest_name" class="form-control" id="exampleFormControlInput1" placeholder="Diva Farhani (Rekan Kerja)">
                         </div>
                         <div class="form-group">
                             <div class="wish"><label for="exampleFormControlTextarea1">Pesan untuk kedua mempelai</label></div>
-                            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
+                            <textarea name="pesan" class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
                         </div>
                         <div class="button-kirim">
                             <button type="submit" class="btn">Kirim</button>
@@ -274,6 +268,22 @@
                                     <div class="comment-content col-md-11 col-sm-10">
                                         <h6 class="small comment-meta"></h6>
                                         <div class="comment-body">
+                                            <?php foreach ($tamu as $d) : ?>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="card-title"><?= $d->nama_tamu ?></h5>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <blockquote class="blockquote mb-0">
+                                                            <p class="card-text"><?= $d->pesan ?></p>
+                                                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p> -->
+                                                            <footer class="blockquote-footer">
+                                                                <p class="card-text"><small class="text-muted">Dibuat <?= $d->created_at ?></small></p>
+                                                            </footer>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
                                 </div>

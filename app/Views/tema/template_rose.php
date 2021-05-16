@@ -9,16 +9,16 @@
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>s/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/plugins/fontawesome-free/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Damion&family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-    <link rel="stylesheet" href="<?= base_url(); ?>s/css/rose.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>s/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>s/vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>s/css/main.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>s/css/util.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/rose.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/main.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/css/util.css">
     <title>Marry.me</title>
 </head>
 
@@ -62,14 +62,14 @@
                         <div class="container">
                             <div class="card-deck">
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="<?= base_url(); ?>s/img/jaehyun.jpeg" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="fade-down" data-aos-delay="500">
+                                    <img class="card-img-top" src="<?= base_url(); ?>/img/jaehyun.jpeg" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="fade-down" data-aos-delay="500">
                                     <div class="card-body">
                                         <h5 class="card-title" data-aos="zoom-in" data-aos-delay="600"> Jojo</h5>
                                         <p class="card-text" data-aos="fade-up" data-aos-delay="800">Son of </br> Father name & Mother Name</p>
                                     </div>
                                 </div>
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="<?= base_url(); ?>s/img/rose.jpeg" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="fade-down" data-aos-delay="500">
+                                    <img class="card-img-top" src="<?= base_url(); ?>/img/rose.jpeg" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="fade-down" data-aos-delay="500">
                                     <div class="card-body">
                                         <h5 class="card-title" data-aos="zoom-in" data-aos-delay="600"> Jeje</h5>
                                         <p class="card-text" data-aos="fade-up" data-aos-delay="800">Daughter of </br> Father name & Mother Name</p>
@@ -142,35 +142,35 @@
         <div class="website-block gallery d-flex position-relative py-1">
             <div class="w-100 py-0">
                 <div class="flexbin">
-                    <a href="<?= base_url(); ?>s/img/b3.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/b3.jpg">
+                    <a href="<?= base_url(); ?>/img/b3.jpg" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/b3.jpg">
                     </a>
-                    <a href="<?= base_url(); ?>s/img/bg10.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/bg10.jpg">
+                    <a href="<?= base_url(); ?>/img/bg10.jpg" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/bg10.jpg">
                     </a>
-                    <a href="<?= base_url(); ?>s/img/bg9.png" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/bg9.png">
+                    <a href="<?= base_url(); ?>/img/bg9.png" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/bg9.png">
                     </a>
-                    <a href="<?= base_url(); ?>s/img/bg6.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/bg6.jpg">
+                    <a href="<?= base_url(); ?>/img/bg6.jpg" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/bg6.jpg">
                     </a>
-                    <a href="<?= base_url(); ?>s/img/bg15.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/bg15.jpg">
+                    <a href="<?= base_url(); ?>/img/bg15.jpg" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/bg15.jpg">
                     </a>
-                    <a href="<?= base_url(); ?>s/img/bg14.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/bg14.jpg">
+                    <a href="<?= base_url(); ?>/img/bg14.jpg" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/bg14.jpg">
                     </a>
-                    <a href="<?= base_url(); ?>s/img/bg16.png" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/bg16.png">
+                    <a href="<?= base_url(); ?>/img/bg16.png" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/bg16.png">
                     </a>
-                    <a href="<?= base_url(); ?>s/img/bg17.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/bg17.jpg">
+                    <a href="<?= base_url(); ?>/img/bg17.jpg" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/bg17.jpg">
                     </a>
-                    <a href="<?= base_url(); ?>s/img/bg18.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/bg18.jpg">
+                    <a href="<?= base_url(); ?>/img/bg18.jpg" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/bg18.jpg">
                     </a>
-                    <a href="<?= base_url(); ?>s/img/bg19.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>s/img/bg19.jpg">
+                    <a href="<?= base_url(); ?>/img/bg19.jpg" data-aos="zoom-out">
+                        <img src="<?= base_url(); ?>/img/bg19.jpg">
                     </a>
                 </div>
             </div>
@@ -294,14 +294,14 @@
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="<?= base_url(); ?>s/js/main.js"></script>
-    <script src="<?= base_url(); ?>s/vendor/bootstrap/js/popper.js"></script>
-    <script src="<?= base_url(); ?>s/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?= base_url(); ?>s/vendor/select2/select2.min.js"></script>
-    <script src="<?= base_url(); ?>s/vendor/countdowntime/moment.min.js"></script>
-    <script src="<?= base_url(); ?>s/vendor/countdowntime/moment-timezone.min.js"></script>
-    <script src="<?= base_url(); ?>s/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-    <script src="<?= base_url(); ?>s/vendor/countdowntime/countdowntime.js"></script>
+    <script src="<?= base_url(); ?>/js/main.js"></script>
+    <script src="<?= base_url(); ?>/vendor/bootstrap/js/popper.js"></script>
+    <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/select2/select2.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/moment.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/moment-timezone.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/countdowntime/countdowntime.js"></script>
     <script>
         $('.cd100').countdown100({
             /*Set Endtime here*/
@@ -317,7 +317,7 @@
             //go to " http://momentjs.com/timezone/ " to get timezone
         });
     </script>
-    <script src="<?= base_url(); ?>s/vendor/tilt/tilt.jquery.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/tilt/tilt.jquery.min.js"></script>
     <script>
         $('.js-tilt').tilt({
             scale: 1.1

@@ -19,7 +19,7 @@
                       <img class="card-img-top" src="<?= base_url(); ?>/image/etnic.png" alt="Dist Photo 2">
                       <div class="card-img-overlay d-flex flex-column justify-content-center">
                         <h5 class="card-title mt-5 pt-2" style="font-weight: bold; font-size:large; color:white">Etnic Modern</h5>
-                        <a href="<?= base_url('Etnic-Modern'); ?>" class="btn btn-light">Lihat Template</a>
+                        <a href="<?= base_url('/Etnic-Modern'); ?>" target="_blank" class="btn btn-light">Lihat Template</a>
                       </div>
                     </div>
                   </div>
@@ -28,7 +28,7 @@
                       <img class="card-img-top" src="<?= base_url(); ?>/image/rustic.png" alt="Dist Photo 2">
                       <div class="card-img-overlay d-flex flex-column justify-content-center">
                         <h5 class="card-title mt-5 pt-2" style="font-weight: bold; font-size:large; color:white">Rustic</h5>
-                        <a href="<?= base_url('Rustic'); ?>" class="btn btn-light">Lihat Template</a>
+                        <a href="<?= base_url('/Rustic'); ?>" target="_blank" class="btn btn-light">Lihat Template</a>
                       </div>
                     </div>
                   </div>
@@ -37,7 +37,7 @@
                       <img class="card-img-top" src="<?= base_url(); ?>/image/astronomy.png" alt="Dist Photo 2">
                       <div class="card-img-overlay d-flex flex-column justify-content-center">
                         <h5 class="card-title mt-5 pt-2" style="font-weight: bold; font-size:large ; color:white">Astronomy</h5>
-                        <a href="<?= base_url('Astronomy'); ?>" class="btn btn-light">Lihat Template</a>
+                        <a href="<?= base_url('Astronomy'); ?>" target="_blank" class="btn btn-light">Lihat Template</a>
                       </div>
                     </div>
                   </div>
@@ -48,7 +48,7 @@
                       <img class="card-img-top" src="<?= base_url(); ?>/image/green.png" alt="Dist Photo 2">
                       <div class="card-img-overlay d-flex flex-column justify-content-center">
                         <h5 class="card-title mt-5 pt-2" style="font-weight: bold; font-size:large; color:white">Green</h5>
-                        <a href="<?= base_url('Green'); ?>" class="btn btn-light">Lihat Template</a>
+                        <a href="<?= base_url('Green'); ?>" target="_blank" class="btn btn-light">Lihat Template</a>
                       </div>
                     </div>
                   </div>
@@ -57,7 +57,7 @@
                       <img class="card-img-top" src="<?= base_url(); ?>/image/rose.png" alt="Dist Photo 2">
                       <div class="card-img-overlay d-flex flex-column justify-content-center">
                         <h5 class="card-title mt-5 pt-2" style="font-weight: bold; font-size:large; color:white">Rose</h5>
-                        <a href="<?= base_url('Rose'); ?>" class="btn btn-light">Lihat Template</a>
+                        <a href="<?= base_url('Rose'); ?>" target="_blank" class="btn btn-light">Lihat Template</a>
                       </div>
                     </div>
                   </div>

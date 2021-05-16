@@ -215,7 +215,9 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="float-right text-muted small">marry.me wedding invitation</div>
-                    <img src="<?= base_url(); ?>/image/etnic.png" class="img-fluid" alt="responsive-image">
+                    <a href="/Etnic-Modern" target="_blank">
+                      <img src="<?= base_url(); ?>/image/etnic.png" class="img-fluid" alt="responsive-image">
+                    </a>
                     <h4 class="card-title text-muted">Etnic Modern</h4>
                     <p class="card-text">Mengusung tema jawa dengan nuansa biru gelap, undanganmu akan terlihat mewah dan elegan.</p>
                   </div>
@@ -229,7 +231,9 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="float-right text-muted small">marry.me wedding invitation</div>
-                    <img src="<?= base_url(); ?>/image/rustic.png" class="img-fluid" alt="responsive-image">
+                    <a href="/Rustic" target="_blank">
+                      <img src="<?= base_url(); ?>/image/rustic.png" class="img-fluid" alt="responsive-image">
+                    </a>
                     <h4 class="card-title text-muted">Rustic</h4>
                     <p class="card-text">Dengan nuansa coklat akan membuat tampilan undanganmu terasa hangat.</p>
                   </div>
@@ -269,7 +273,9 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="float-right text-muted">marry.me wedding invitation</div>
-                    <img src="<?= base_url(); ?>/image/astronomy.png" class="img-fluid" alt="responsive-image">
+                    <a href="/Astronomy" target="_blank">
+                      <img src="<?= base_url(); ?>/image/astronomy.png" class="img-fluid" alt="responsive-image">
+                    </a>
                     <h4 class="card-title">Astronomy</h4>
                     <p class="card-text">Tema ini menampilkan warna-warna dimalam hari , dengan taburan bintang akan membuat undanganmu terlihat sangat romantis.</p>
                   </div>
@@ -283,7 +289,9 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="float-right text-muted small">marry.me wedding invitation</div>
-                    <img src="<?= base_url(); ?>/image/rose.png" class="img-fluid" alt="responsive-image">
+                    <a href="/Rose" target="_blank">
+                      <img src="<?= base_url(); ?>/image/rose.png" class="img-fluid" alt="responsive-image">
+                    </a>
                     <h4 class="card-title">Rose</h4>
                     <p class="card-text">Undangan ini memiliki nuansa yang segar, dengan ornamen bunga mawar serta warna merah muda yang lembut.</p>
                   </div>
@@ -322,7 +330,9 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="float-right text-muted">marry.me wedding invitation</div>
-                    <img src="<?= base_url(); ?>/image/green.png" class="img-fluid" alt="responsive-image">
+                    <a href="/Green" target="_blank">
+                      <img src="<?= base_url(); ?>/image/green.png" class="img-fluid" alt="responsive-image">
+                    </a>
                     <h4 class="card-title">Green</h4>
                     <p class="card-text">Tema ini menggunakan warna utama yaitu hijau, membuat undangan ini memberikan kesan yang menyenangkan namun tetap terlihat cantik.</p>
                   </div>

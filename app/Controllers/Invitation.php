@@ -6,6 +6,7 @@ use App\Models\KomikModel;
 use App\Models\InvitationModel;
 use App\Models\GalleryModel;
 use App\Models\MusicModel;
+use App\Models\TamuModel;
 
 class Invitation extends BaseController
 {
@@ -18,6 +19,7 @@ class Invitation extends BaseController
         $this->komikModel = new KomikModel();
         $this->galleryModel = new GalleryModel();
         $this->musicModel = new MusicModel();
+        $this->tamuModel = new TamuModel();
     }
 
     public function index()
@@ -107,6 +109,7 @@ class Invitation extends BaseController
                 'dashboard' => $this->invitationModel->getDashboard(),
                 'gallery' => $this->invitationModel->getGalleryDashboard(),
                 'music' => $this->invitationModel->getMusicDashboard(),
+                'video' => $this->invitationModel->getYtPengaturan(),
             ];
             return view('invitation/pengaturan', $data);
         }
@@ -159,9 +162,25 @@ class Invitation extends BaseController
             'title' => 'Daftar komik',
             'link' => $this->invitationModel->getYt(user()->id),
             'gallery' => $this->invitationModel->getYtPengaturan(),
-            'dashboard' => $this->invitationModel->getDashboard()
+            'dashboard' => $this->invitationModel->getDashboard(),
+            'video' => $this->invitationModel->getYtPengaturan(),
         ];
         return view('invitation/uploadgallery', $data);
+    }
+
+    public function tamuCreate()
+    {
+        $slug = $this->request->getVar('slug');
+        $this->tamuModel->save([
+            'id_users' => $this->request->getVar('id_users'),
+            'slug' => $slug,
+            'nama_tamu' => $this->request->getVar('nama_tamu'),
+            'pesan' => $this->request->getVar('pesan')
+        ]);
+
+        session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan.');
+
+        return redirect()->to('/inv/' . $slug);
     }
 
 
@@ -177,7 +196,8 @@ class Invitation extends BaseController
             'inv' => $this->invitationModel->getInv($slug),
             'link' => $this->invitationModel->getYt($slug),
             'gallery' => $this->invitationModel->getGallery($slug),
-            'music' => $this->invitationModel->getMusicDashboard($slug)
+            'music' => $this->invitationModel->getMusic($slug),
+            'tamu' => $this->invitationModel->getDataTamu($slug)
         ];
 
         //jika inv tidak ada di tabel
@@ -241,7 +261,7 @@ class Invitation extends BaseController
                     ]
                 ],
                 'foto_p' => [
-                    'rules' => 'max_size[foto_p,2048]|is_image[foto_p]|mime_in[foto_p,image/jpg,image/jpeg,image/png]',
+                    'rules' => 'max_size[foto_p,10480]|is_image[foto_p]|mime_in[foto_p,image/jpg,image/jpeg,image/png]',
                     'errors' => [
                         'max_size' => 'Ukuran gambar terlalu besar',
                         'is_image' => 'Yang anda pilih bukan gambar',
@@ -249,7 +269,7 @@ class Invitation extends BaseController
                     ]
                 ],
                 'foto_w' => [
-                    'rules' => 'max_size[foto_w,2048]|is_image[foto_w]|mime_in[foto_w,image/jpg,image/jpeg,image/png]',
+                    'rules' => 'max_size[foto_w,10480]|is_image[foto_w]|mime_in[foto_w,image/jpg,image/jpeg,image/png]',
                     'errors' => [
                         'max_size' => 'Ukuran gambar terlalu besar',
                         'is_image' => 'Yang anda pilih bukan gambar',
@@ -257,7 +277,7 @@ class Invitation extends BaseController
                     ]
                 ]
             ])) {
-                return redirect()->to('/')->withInput();
+                return redirect()->to('/beranda')->withInput();
             }
 
             //ambil gambar
@@ -299,11 +319,9 @@ class Invitation extends BaseController
                 'alamat_akad' => $this->request->getVar('alamat_akad'),
                 'akad_time' => $this->request->getVar('akad_time'),
                 'akad_date' => $this->request->getVar('akad_date'),
-                'akad_map' => $this->request->getVar('akad_map'),
                 'alamat_resepsi' => $this->request->getVar('alamat_resepsi'),
                 'resepsi_time' => $this->request->getVar('resepsi_time'),
                 'resepsi_date' => $this->request->getVar('resepsi_date'),
-                'resepsi_map' => $this->request->getVar('resepsi_map')
             ]);
 
             session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan.');
@@ -377,6 +395,43 @@ class Invitation extends BaseController
 
             return view('invitation/pengaturan', $data);
         }
+    }
+
+    public function cobaUpdate($id)
+    {
+        $this->invitationModel->save([
+            'id_inv' => $id,
+            'id_users' => $this->request->getVar('id_users'),
+            'invoice' => $this->request->getVar('invoice'),
+            'id_tema' => $this->request->getVar('id_tema'),
+            'couple_name' => $this->request->getVar('couple_name'),
+            'slug' => $this->request->getVar('slug'),
+            'wedding_date' => $this->request->getVar('wedding_date'),
+            'foto_p' => $this->request->getVar('foto_p'),
+            'pria' => $this->request->getVar('pria'),
+            'instagram_p' => $this->request->getVar('instagram_p'),
+            'ayah_p' => $this->request->getVar('ayah_p'),
+            'ibu_p' => $this->request->getVar('ibu_p'),
+            'foto_w' => $this->request->getVar('foto_w'),
+            'wanita' => $this->request->getVar('wanita'),
+            'instagram_w' => $this->request->getVar('instagram_w'),
+            'ayah_w' => $this->request->getVar('ayah_w'),
+            'ibu_w' => $this->request->getVar('ibu_w'),
+            'alamat_akad' => $this->request->getVar('alamat_akad'),
+            'akad_time' => $this->request->getVar('akad_time'),
+            'akad_date' => $this->request->getVar('akad_date'),
+            'akad_map' => $this->request->getVar('akad_map'),
+            'alamat_resepsi' => $this->request->getVar('alamat_resepsi'),
+            'resepsi_time' => $this->request->getVar('resepsi_time'),
+            'resepsi_date' => $this->request->getVar('resepsi_date'),
+            'resepsi_map' => $this->request->getVar('resepsi_map'),
+            'link_youtube' => $this->request->getVar('link_youtube'),
+            'gambar' => $this->request->getVar('gambar'),
+        ]);
+
+        session()->setFlashdata('pesan', 'Data Berhasil Diubah.');
+
+        return redirect()->to('/pengaturan');
     }
 
     public function update($id)

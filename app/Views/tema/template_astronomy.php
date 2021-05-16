@@ -38,7 +38,10 @@
     </audio>
 
     <a href="#" class="btn float-end" onclick="document.getElementById('music').play()">
-        <i class="fa fa-music my-float"></i>
+        <i class="fa fa-volume-up my-float"></i>
+    </a>
+    <a href="#" class="btn float-end" onclick="document.getElementById('music').pause()">
+        <i class="fa fa-volume-off my-float"></i>
     </a>
     <!-- section1 : hero or head title -->
     <section class="section1">
@@ -215,17 +218,24 @@
                         <h1> Guestbook </h1>
                     </div>
 
-                    <form method="post">
+                    <form action="/invitation/tamuCreate" method="post" enctype="multipart/form-data">
+                        <?= csrf_field(); ?>
+
+                        <?php foreach ($link as $d) : ?>
+                            <input type="hidden" name="id_users" value="<?= $d->id_users; ?>">
+                            <input type="hidden" name="slug" value="<?= (old('slug')) ? old('slug') : $d->slug ?>">
+                        <?php endforeach; ?>
+
                         <div class="form-group">
                             <div class="name"><label for="name">Nama Tamu</label></div>
-                            <input type="text" name="name" value="guest_name" class="form-control" id="exampleFormControlInput1" placeholder="Diva Farhani (Rekan Kerja)">
+                            <input type="text" name="nama_tamu" class="form-control" id="exampleFormControlInput1">
                         </div>
                         <div class="form-group">
                             <div class="wish"><label for="exampleFormControlTextarea1">Pesan untuk kedua mempelai</label></div>
-                            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
+                            <input type="text" name="pesan" class="form-control" id="exampleFormControlTextarea1" rows="9"></input>
                         </div>
                         <div class="button-kirim">
-                            <button type="submit" class="btn">Kirim</button>
+                            <button type="submit" class="btn btn-primary">Kirim</button>
                         </div>
                     </form>
                 </div>
@@ -238,12 +248,28 @@
             <div class="container py-0">
                 <div class="display8">
                     <div class="card-deck">
-                        <div class="box box-2">
-                            <div class="comments col-md-9" id="comments">
-                                <div class="comment">
-                                    <div class="comment-content col-md-11 col-sm-10">
-                                        <h6 class="small comment-meta"></h6>
-                                        <div class="comment-body">
+                        <div class="comments col-md-9" id="comments">
+                            <div class="comment">
+                                <div class="comment-content col-md-11 col-sm-10">
+                                    <h6 class="small comment-meta"></h6>
+                                    <div class="comment-body">
+                                        <div class="card">
+                                            <?php foreach ($tamu as $d) : ?>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="card-title"><?= $d->nama_tamu ?></h5>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <blockquote class="blockquote mb-0">
+                                                            <p class="card-text"><?= $d->pesan ?></p>
+                                                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p> -->
+                                                            <footer class="blockquote-footer">
+                                                                <p class="card-text"><small class="text-muted">Dibuat <?= $d->created_at ?></small></p>
+                                                            </footer>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
                                 </div>

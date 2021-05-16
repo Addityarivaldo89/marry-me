@@ -26,7 +26,7 @@
                         <?php } ?>
                         <div class="block">
                             <label>Upload Images</label>
-                            <input type="file" name="gambar[]" class="form-control" multiple />
+                            <input type="file" name="gambar[]" class="form-control" accept="image/png, image/jpeg" multiple />
                             <input type="hidden" name="id_users" value="<?= user()->id; ?>">
                             <?php foreach ($dashboard as $d) : ?>
                                 <input type="hidden" name="slug" value="<?= (old('slug')) ? old('slug') : $d->slug ?>">
@@ -35,9 +35,7 @@
                         <form action="/pengaturan">
                             <div class="form-group">
                                 <label for="">Link Video Pre-Wedding</label>
-                                <?php foreach ($gallery as $g) : ?>
-                                    <input type="link" class="form-control" name="link_youtube" value="https://youtu.be/<?= $g->link_youtube; ?>">
-                                <?php endforeach; ?>
+                                <input type="link" class="form-control" name="link_youtube">
                                 <small id="" class="form-text text-muted">Upload Videomu di Youtube terlebih dahulu <br> Contoh :
                                     https://youtu.be/<b>iT44pZmor3o</b> <br> Perhatikan Huruf yang dicetak tebal</small>
                             </div>

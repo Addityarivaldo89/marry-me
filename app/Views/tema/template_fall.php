@@ -232,8 +232,8 @@
                     <form action="/invitation/tamuCreate" method="post" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
 
-                        <input type="hidden" name="id_users" value="<?= user()->id; ?>">
                         <?php foreach ($link as $d) : ?>
+                            <input type="hidden" name="id_users" value="<?= user()->id; ?>">
                             <input type="hidden" name="slug" value="<?= (old('slug')) ? old('slug') : $d->slug ?>">
                         <?php endforeach; ?>
 
@@ -289,6 +289,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- footer -->

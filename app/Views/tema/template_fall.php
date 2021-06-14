@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fall</title>
+    <title><?= $inv['couple_name']; ?> - Marry.me</title>
+    <script type="text/javascript">
+        message = " <?= $inv['couple_name']; ?> - Marry.me ";
+
+        function step() {
+            message = message.substr(1) + message.substr(0, 1);
+            document.title = message.substr(0, 15);
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -21,10 +29,9 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/vendor/select2/select2.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/css/main.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/css/util.css">
-    itle>Marry.me</title>
 </head>
 
-<body>
+<body onload="setInterval(step,500)">
     <style>
         body {
             font-family: 'Lobster';
@@ -33,18 +40,6 @@
             src: url(../font/Moonwake/Moonwake.otf);
         }
     </style>
-    <audio id="music" controls autoplay hidden>
-        <?php foreach ($music as $m) : ?>
-            <source src="<?= base_url() ?>/uploads/<?= $m->slug; ?>/<?= $m->music; ?>" type="audio/mpeg">
-        <?php endforeach; ?>
-    </audio>
-
-    <a href="#" class="btn float-end" onclick="document.getElementById('music').play()">
-        <i class="fa fa-volume-up my-float"></i>
-    </a>
-    <a href="#" class="btn float-end" onclick="document.getElementById('music').pause()">
-        <i class="fa fa-volume-off my-float"></i>
-    </a>
 
     <!-- header -->
     <section class="section1">
@@ -308,6 +303,19 @@
             </div>
         </div>
     </section>
+
+    <audio id="music" controls autoplay hidden>
+        <?php foreach ($music as $m) : ?>
+            <source src="<?= base_url() ?>/uploads/<?= $m->slug; ?>/<?= $m->music; ?>" type="audio/mpeg">
+        <?php endforeach; ?>
+    </audio>
+
+    <a class="float" onclick="document.getElementById('music').play()">
+        <i class="fa fa-play my-float"></i>
+    </a>
+    <a class="vol-float" onclick="document.getElementById('music').pause()">
+        <i class="fa fa-pause my-float"></i>
+    </a>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

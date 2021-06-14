@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Etnic</title>
+    <title><?= $inv['couple_name']; ?> - Marry.me</title>
+    <script type="text/javascript">
+        message = " <?= $inv['couple_name']; ?> - Marry.me ";
+
+        function step() {
+            message = message.substr(1) + message.substr(0, 1);
+            document.title = message.substr(0, 15);
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -21,25 +29,14 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/css/etnic.css">
 </head>
 
-<body>
+<body onload="setInterval(step,500)">
     <style>
         body {
             font-family: 'Belleza';
             font-family: 'Dancing Script';
         }
     </style>
-    <audio id="music" controls autoplay hidden>
-        <?php foreach ($music as $m) : ?>
-            <source src="<?= base_url() ?>/uploads/<?= $m->slug; ?>/<?= $m->music; ?>" type="audio/mpeg">
-        <?php endforeach; ?>
-    </audio>
 
-    <a href="#" class="btn float-end" onclick="document.getElementById('music').play()">
-        <i class="fa fa-volume-up my-float"></i>
-    </a>
-    <a href="#" class="btn float-end" onclick="document.getElementById('music').pause()">
-        <i class="fa fa-volume-off my-float"></i>
-    </a>
     <!-- section1 : hero or head title -->
     <section class="section1">
         <div class="website-block hero d-flex position-relative text-white text-center py-10 align-items-center">
@@ -295,6 +292,19 @@
             </div>
         </div>
     </section>
+
+    <audio id="music" controls autoplay hidden>
+        <?php foreach ($music as $m) : ?>
+            <source src="<?= base_url() ?>/uploads/<?= $m->slug; ?>/<?= $m->music; ?>" type="audio/mpeg">
+        <?php endforeach; ?>
+    </audio>
+
+    <a class="float" onclick="document.getElementById('music').play()">
+        <i class="fa fa-play my-float"></i>
+    </a>
+    <a class="vol-float" onclick="document.getElementById('music').pause()">
+        <i class="fa fa-pause my-float"></i>
+    </a>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="<?= base_url(); ?>/vendor/bootstrap/js/popper.js"></script>

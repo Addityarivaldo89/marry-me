@@ -44,7 +44,17 @@
             <div class="container py-0">
                 <div class="display1">
                     <div class="py-4">
-                        <h3 class="display1-sub-title" data-aos="fade-down" data-aos-delay="500"><?= $inv['akad_date']; ?></h3>
+                        <h3 class="display1-sub-title" data-aos="fade-down" data-aos-delay="500">
+                            <?php
+                            $date   = new DateTime($inv['akad_date']); //this returns the current date time
+                            $result = $date->format('d F Y');
+                            if ($result) {
+                                echo $result;
+                            } else { // format failed
+                                echo "Unknown Time";
+                            }
+                            ?>
+                        </h3>
                         <h1 class="display1-title" data-aos="zoom-out-up" data-aos-delay="1000"><?= $inv['couple_name']; ?></h1>
                         <h3 class="display1-sub-title" data-aos="fade-up" data-aos-delay="500">New Journey</h3>
                     </div>
@@ -94,40 +104,26 @@
                     <div class="py-4">
                         <div class="size1 flex-w flex-c-m p-t-55 p-b-55 p-l-15 p-r-15">
                             <div class="wsize1">
-                                <h3 class="display1-sub-title" data-aos="fade-down" data-aos-delay="500"><?= $inv['akad_date']; ?></h3>
+                                <h3 class="display1-sub-title" data-aos="fade-down" data-aos-delay="500">
+                                    <?php
+                                    $date   = new DateTime($inv['akad_date']); //this returns the current date time
+                                    $result = $date->format('d F Y H.i');
+                                    if ($result) {
+                                        echo $result . 'WIB';
+                                    } else { // format failed
+                                        echo "Unknown Time";
+                                    }
+                                    ?>
+                                </h3>
                                 <h3 class="l1-txt1 txt-center p-b-22" style="font-family: Prata; font-size: 50pt" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="30">
                                     INVITE YOU
                                 </h3>
                                 <p class="txt-center m2-txt1 p-b-67" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="30">
                                     To Our Wedding
                                 </p>
+
                                 <div class=" flex-w flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="30">
-                                    <!-- days -->
-                                    <div class="flex-col-c-m wsize2 m-b-20">
-                                        <span class="l1-txt2 p-b-4 days">20</span>
-                                        <span class="m2-txt2">Days</span>
-                                    </div>
-
-                                    <span class="l1-txt2 p-b-22">:</span>
-                                    <!-- hour -->
-                                    <div class="flex-col-c-m wsize2 m-b-20">
-                                        <span class="l1-txt2 p-b-4 hours">17</span>
-                                        <span class="m2-txt2">Hours</span>
-                                    </div>
-
-                                    <span class="l1-txt2 p-b-22 respon2">:</span>
-                                    <!-- minutes -->
-                                    <div class="flex-col-c-m wsize2 m-b-20">
-                                        <span class="l1-txt2 p-b-4 minutes">50</span>
-                                        <span class="m2-txt2">Minutes</span>
-                                    </div>
-
-                                    <span class="l1-txt2 p-b-22">:</span>
-                                    <!-- second -->
-                                    <div class="flex-col-c-m wsize2 m-b-20">
-                                        <span class="l1-txt2 p-b-4 seconds">39</span>
-                                        <span class="m2-txt2">Seconds</span>
-                                    </div>
+                                    <p id="demo"></p>
                                 </div>
                             </div>
                         </div>
@@ -158,10 +154,10 @@
 
     <section class="section5">
         <div class="website-block hero d-flex position-relative text-white text-center
-        py-10 align-items-center">
+        py-0 align-items-center">
             <div class="container py-0">
                 <div class="display5">
-                    <div class="py-4">
+                    <div class="py-0">
                         <h3 class="location-title" data-aos="zoom-out-up">
                             Our Wedding Location
                         </h3>
@@ -170,18 +166,29 @@
                                 <div class="card mb-4">
                                     <div class="card-body">
                                         <h4 class="card-title">Akad Nikah</h4>
-                                        <p class="card-text"><?= $inv['akad_time']; ?></p>
+                                        <p class="card-text">
+                                            <?php
+                                            $date   = new DateTime($inv['akad_date']); //this returns the current date time
+                                            $result = $date->format('H.i');
+                                            echo '<b>' . $result . " WIB<br></b>";
+                                            ?>
+                                        </p>
                                         <p class="card-text"><?= $inv['alamat_akad']; ?></p>
                                     </div>
-                                    <iframe class="card-maps-top img-fluid" width="100%" height="100%" src="https://maps.google.com/maps?q=<?= $inv['alamat_akad']; ?>&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
+                                    <iframe class="card-maps-top" width="550" height="400" src="https://maps.google.com/maps?q=<?= $inv['alamat_akad']; ?>&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
                                 </div>
                                 <div class="card mb-4">
                                     <div class="card-body">
                                         <h4 class="card-title">Resepsi</h4>
-                                        <p class="card-text"><?= $inv['resepsi_time']; ?></p>
+                                        <p class="card-text">
+                                            <?php
+                                            $date   = new DateTime($inv['resepsi_date']); //this returns the current date time
+                                            $result = $date->format('H.i');
+                                            echo '<b>' . $result . " WIB<br></b>";
+                                            ?></p>
                                         <p class="card-text"><?= $inv['alamat_resepsi']; ?></p>
                                     </div>
-                                    <iframe class="card-maps-top img-fluid" width="100%" height="100%" src="https://maps.google.com/maps?q=<?= $inv['alamat_resepsi']; ?>&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
+                                    <iframe class="card-maps-top" width="550" height="400" src="https://maps.google.com/maps?q=<?= $inv['alamat_resepsi']; ?>&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +230,7 @@
 
                         <div class="form-group">
                             <div class="name"><label for="name">Nama Tamu</label></div>
-                            <input type="text" name="nama_tamu" class="form-control" id="exampleFormControlInput1">
+                            <input type="text" name="nama_tamu" placeholder="Masukkan Nama Anda" class="form-control" id="exampleFormControlInput1">
                         </div>
                         <div class="form-group">
                             <div class="wish"><label for="exampleFormControlTextarea1">Pesan untuk kedua mempelai</label></div>
@@ -316,6 +323,38 @@
     <script src="<?= base_url(); ?>/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
     <script src="<?= base_url(); ?>/vendor/countdowntime/countdowntime.js"></script>
     <script>
+        // Mengatur waktu akhir perhitungan mundur
+        var countDownDate = new Date("<?= $inv['akad_date']; ?>").getTime();
+
+        // Memperbarui hitungan mundur setiap 1 detik
+        var x = setInterval(function() {
+
+            // Untuk mendapatkan tanggal dan waktu hari ini
+            var now = new Date().getTime();
+
+            // Temukan jarak antara sekarang dan tanggal hitung mundur
+            var distance = countDownDate - now;
+
+            // Perhitungan waktu untuk hari, jam, menit dan detik
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Keluarkan hasil dalam elemen dengan id = "demo"
+            document.getElementById("demo").innerHTML = '<span class="l1-txt2">' + days + '</span>Days </div>' + '<span class="l1-txt2 p-b-22"> : </span>' + '<span class="l1-txt2">' + hours + '</span>Hours </div>' + '<span class="l1-txt2 p-b-22"> : </span>' + '<span class="l1-txt2">' + minutes + '</span>Minutes </div>' + '<span class="l1-txt2 p-b-22"> : </span>' + '<span class="l1-txt2">' + seconds + '</span>Seconds </div>';
+
+            // document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+            //     minutes + "m " + seconds + "s ";
+
+            // Jika hitungan mundur selesai, tulis beberapa teks 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    <!-- <script>
         $('.cd100').countdown100({
             /*Set Endtime here*/
             /*Endtime must be > current time*/
@@ -329,7 +368,7 @@
             // ex:  timeZone: "America/New_York"
             //go to " http://momentjs.com/timezone/ " to get timezone
         });
-    </script>
+    </script> -->
     <script src="<?= base_url(); ?>/vendor/tilt/tilt.jquery.min.js"></script>
     <script>
         $('.js-tilt').tilt({

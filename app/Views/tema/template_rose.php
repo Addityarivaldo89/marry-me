@@ -43,9 +43,19 @@
             <div class="container py-0">
                 <div class="display1">
                     <div class="py-4">
-                        <h3 class="display1-sub-title" data-aos="fade-down" data-aos-delay="500">20 . 01 . 2025</h3>
-                        <h1 class="display1-title" data-aos="zoom-in" data-aos-delay="500">Haycal & Shafa</h1>
-                        <h3 class="display1-sub-title" data-aos="fade-up" data-aos-delay="500">The Wedding</h3>
+                        <h3 class="display1-sub-title" data-aos="fade-down" data-aos-delay="500">
+                            <?php
+                            $date   = new DateTime($inv['akad_date']); //this returns the current date time
+                            $result = $date->format('d F Y');
+                            if ($result) {
+                                echo $result;
+                            } else { // format failed
+                                echo "Unknown Time";
+                            }
+                            ?>
+                        </h3>
+                        <h1 class="display1-title" data-aos="zoom-in" data-aos-delay="500"><?= $inv['couple_name']; ?></h1>
+                        <h3 class="display1-sub-title" data-aos="fade-up" data-aos-delay="500"><?= $inv['sub_judul']; ?></h3>
                     </div>
                 </div>
             </div>
@@ -66,17 +76,17 @@
                         <div class="container">
                             <div class="card-deck">
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="<?= base_url(); ?>/img/jaehyun.jpeg" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="fade-down" data-aos-delay="500">
+                                    <img class="card-img-top" src="/img/user-upload/<?= $inv['foto_p']; ?>" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="fade-down" data-aos-delay="500">
                                     <div class="card-body">
-                                        <h5 class="card-title" data-aos="zoom-in" data-aos-delay="600"> Jojo</h5>
-                                        <p class="card-text" data-aos="fade-up" data-aos-delay="800">Son of </br> Father name & Mother Name</p>
+                                        <h5 class="card-title" data-aos="zoom-in" data-aos-delay="600"><?= $inv['pria']; ?></h5>
+                                        <p class="card-text" data-aos="fade-up" data-aos-delay="800">Son of </br> <?= $inv['ayah_p']; ?> & <?= $inv['ibu_p']; ?></p>
                                     </div>
                                 </div>
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="<?= base_url(); ?>/img/rose.jpeg" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="fade-down" data-aos-delay="500">
+                                    <img class="card-img-top" src="/img/user-upload/<?= $inv['foto_w']; ?>" alt="pengentin pria" style="width: 200px; align-item:center" data-aos="fade-down" data-aos-delay="500">
                                     <div class="card-body">
-                                        <h5 class="card-title" data-aos="zoom-in" data-aos-delay="600"> Jeje</h5>
-                                        <p class="card-text" data-aos="fade-up" data-aos-delay="800">Daughter of </br> Father name & Mother Name</p>
+                                        <h5 class="card-title" data-aos="zoom-in" data-aos-delay="600"><?= $inv['wanita']; ?></h5>
+                                        <p class="card-text" data-aos="fade-up" data-aos-delay="800">Daughter of </br> <?= $inv['ayah_w']; ?> & <?= $inv['ibu_w']; ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +107,15 @@
                         <div class="size1 flex-w flex-c-m p-t-55 p-b-55 p-l-15 p-r-15">
                             <div class="wsize1">
                                 <h3 class="display1-sub-title" data-aos="fade-down">
-                                    20.01.2025
+                                    <?php
+                                    $date   = new DateTime($inv['akad_date']); //this returns the current date time
+                                    $result = $date->format('d F Y H.i');
+                                    if ($result) {
+                                        echo $result . 'WIB';
+                                    } else { // format failed
+                                        echo "Unknown Time";
+                                    }
+                                    ?>
                                 </h3>
                                 <h3 class="l1-txt1 txt-center p-b-20" data-aos="zoom-out">
                                     INVITE YOU
@@ -105,33 +123,8 @@
                                 <p class="txt-center m2-txt1 p-b-67 countdown-description" style="font-family: Damion; font-size: 50px" data-aos="fade-up">
                                     To Our Special Day
                                 </p>
-                                <div class=" flex-w flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1" style="border:none;background-color: #B78E80;" data-aos="fade-down">
-                                    <!-- days -->
-                                    <div class="flex-col-c-m wsize2 m-b-20">
-                                        <span class="l1-txt2 p-b-4 days">20</span>
-                                        <span class="m2-txt2">Days</span>
-                                    </div>
-
-                                    <span class="l1-txt2 p-b-22">:</span>
-                                    <!-- hour -->
-                                    <div class="flex-col-c-m wsize2 m-b-20">
-                                        <span class="l1-txt2 p-b-4 hours">17</span>
-                                        <span class="m2-txt2">Hours</span>
-                                    </div>
-
-                                    <span class="l1-txt2 p-b-22 respon2">:</span>
-                                    <!-- minutes -->
-                                    <div class="flex-col-c-m wsize2 m-b-20">
-                                        <span class="l1-txt2 p-b-4 minutes">50</span>
-                                        <span class="m2-txt2">Minutes</span>
-                                    </div>
-
-                                    <span class="l1-txt2 p-b-22">:</span>
-                                    <!-- second -->
-                                    <div class="flex-col-c-m wsize2 m-b-20">
-                                        <span class="l1-txt2 p-b-4 seconds">39</span>
-                                        <span class="m2-txt2">Seconds</span>
-                                    </div>
+                                <div class=" flex-w flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="30">
+                                    <p id="demo"></p>
                                 </div>
                             </div>
                         </div>
@@ -146,36 +139,11 @@
         <div class="website-block gallery d-flex position-relative py-1">
             <div class="w-100 py-0">
                 <div class="flexbin">
-                    <a href="<?= base_url(); ?>/img/b3.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/b3.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg10.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/bg10.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg9.png" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/bg9.png">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg6.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/bg6.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg15.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/bg15.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg14.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/bg14.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg16.png" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/bg16.png">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg17.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/bg17.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg18.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/bg18.jpg">
-                    </a>
-                    <a href="<?= base_url(); ?>/img/bg19.jpg" data-aos="zoom-out">
-                        <img src="<?= base_url(); ?>/img/bg19.jpg">
-                    </a>
+                    <?php foreach ($gallery as $g) : ?>
+                        <a href="<?= base_url(); ?>/uploads/<?= $g->slug; ?>/<?= $g->gambar; ?>" data-aos="zoom-in">
+                            <img src="<?= base_url(); ?>/uploads/<?= $g->slug; ?>/<?= $g->gambar; ?>">
+                        </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -194,19 +162,32 @@
                         <div class="container">
                             <div class="card-deck">
                                 <div class="card mb-4 location-akad" data-aos="zoom-out-down">
-                                    <iframe class="card-maps-top img-fluid" width="100%" height="100%" src="https://maps.google.com/maps?q=jakart&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #B78E80"></iframe>
+                                    <iframe class="card-maps-top" width="550" height="400" src="https://maps.google.com/maps?q=<?= $inv['alamat_akad']; ?>&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
+
                                     <div class="card-body-location">
                                         <h4 class="card-title-location">Akad Nikah</h4>
-                                        <p class="card-text-location"> Jl. Gatot Subroto No.Kav. 37, RT.6/RW.3, Kuningan, Kuningan Tim.,
-                                            Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950 </p>
+                                        <p class="card-text">
+                                            <?php
+                                            $date   = new DateTime($inv['akad_date']); //this returns the current date time
+                                            $result = $date->format('H.i');
+                                            echo '<b>' . $result . " WIB<br></b>";
+                                            ?>
+                                        </p>
+                                        <p class="card-text-location"><?= $inv['alamat_resepsi']; ?></p>
                                     </div>
                                 </div>
                                 <div class="card mb-4 location-resepsi" data-aos="zoom-out-down">
-                                    <iframe class="card-maps-top img-fluid" width="100%" height="100%" src="https://maps.google.com/maps?q=jakart&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #B78E80"></iframe>
+                                    <iframe class="card-maps-top" width="550" height="400" src="https://maps.google.com/maps?q=<?= $inv['alamat_resepsi']; ?>&t=&z=11&ie=UTF8&iwloc=&output=embed" style="border: 5px solid #4c3b71"></iframe>
+
                                     <div class="card-body-location">
                                         <h4 class="card-title-location">Resepsi</h4>
-                                        <p class="card-text-location"> Jl. Gatot Subroto No.Kav. 37, RT.6/RW.3, Kuningan, Kuningan Tim.,
-                                            Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950 </p>
+                                        <p class="card-text">
+                                            <?php
+                                            $date   = new DateTime($inv['resepsi_date']); //this returns the current date time
+                                            $result = $date->format('H.i');
+                                            echo '<b>' . $result . " WIB<br></b>";
+                                            ?></p>
+                                        <p class="card-text-location"><?= $inv['alamat_resepsi']; ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -227,9 +208,10 @@
                             "we loved with love that was more than love"
                         </div>
                         <div class="display6-video">
-                            <video width="400" controls>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/BZpUUjEUGnE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </video>
+                            <?php
+                            foreach ($link as $links) : ?>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $links->link_youtube; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -254,7 +236,7 @@
 
                         <div class="form-group">
                             <div class="name"><label for="name">Nama Tamu</label></div>
-                            <input type="text" name="nama_tamu" value="guest_name" class="form-control" id="exampleFormControlInput1" placeholder="Diva Farhani (Rekan Kerja)">
+                            <input type="text" name="nama_tamu"  class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Nama Anda">
                         </div>
                         <div class="form-group">
                             <div class="wish"><label for="exampleFormControlTextarea1">Pesan untuk kedua mempelai</label></div>
@@ -315,7 +297,7 @@
             <div class="container py-0">
                 <div class="display9">
                     <div class="py-4">
-                        <h1 class="content-sec9">Haycal & Shafa</h1>
+                        <h1 class="content-sec9"><?= $inv['couple_name']; ?></h1>
                         <h3 class="sub-content-sec9">The Wedding</h3>
                     </div>
                 </div>
@@ -346,6 +328,38 @@
     <script src="<?= base_url(); ?>/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
     <script src="<?= base_url(); ?>/vendor/countdowntime/countdowntime.js"></script>
     <script>
+        // Mengatur waktu akhir perhitungan mundur
+        var countDownDate = new Date("<?= $inv['akad_date']; ?>").getTime();
+
+        // Memperbarui hitungan mundur setiap 1 detik
+        var x = setInterval(function() {
+
+            // Untuk mendapatkan tanggal dan waktu hari ini
+            var now = new Date().getTime();
+
+            // Temukan jarak antara sekarang dan tanggal hitung mundur
+            var distance = countDownDate - now;
+
+            // Perhitungan waktu untuk hari, jam, menit dan detik
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Keluarkan hasil dalam elemen dengan id = "demo"
+            document.getElementById("demo").innerHTML = '<span class="l1-txt2">' + days + '</span>Days </div>' + '<span class="l1-txt2 p-b-22"> : </span>' + '<span class="l1-txt2">' + hours + '</span>Hours </div>' + '<span class="l1-txt2 p-b-22"> : </span>' + '<span class="l1-txt2">' + minutes + '</span>Minutes </div>' + '<span class="l1-txt2 p-b-22"> : </span>' + '<span class="l1-txt2">' + seconds + '</span>Seconds </div>';
+
+            // document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+            //     minutes + "m " + seconds + "s ";
+
+            // Jika hitungan mundur selesai, tulis beberapa teks 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    <!-- <script>
         $('.cd100').countdown100({
             /*Set Endtime here*/
             /*Endtime must be > current time*/
@@ -359,7 +373,7 @@
             // ex:  timeZone: "America/New_York"
             //go to " http://momentjs.com/timezone/ " to get timezone
         });
-    </script>
+    </script> -->
     <script src="<?= base_url(); ?>/vendor/tilt/tilt.jquery.min.js"></script>
     <script>
         $('.js-tilt').tilt({

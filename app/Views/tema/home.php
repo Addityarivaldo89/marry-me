@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <link rel="icon" href="data:;base64,iVBORwOKGO=">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url(); ?>/css/home.css">
   <link rel="stylesheet" href="<?= base_url(); ?>/css/navbar.css">
 
@@ -61,10 +62,14 @@
       <div class="container py-0">
         <div class="display1-hero">
           <div class="hero-content">
-            <h1 class="title">
+            <h1 class="title" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-offset="300" 
+            data-aos-duration="1000">
               Digital Wedding Invitaton
             </h1>
-            <h2 class="sub-title">
+            <h2 class="sub-title" data-aos="fade-up"
+            data-aos-duration="2000">
               saatnya beralih ke undangan digital, buat undangan pernikahanmu lebih berkesan.
             </h2>
           </div>
@@ -78,11 +83,24 @@
       <div class="container py-0">
         <div class="display2-description">
           <div class="clearfix">
-            <img src="<?= base_url(); ?>/img/b2.jpg" class="col-md-4 float-md-end mb-3 img-fluid" width="200px" height="50px" alt="...">
-            <div class="sec2-title" style="font-family:Montserrat; padding-bottom:4%">
+            <img src="<?= base_url(); ?>/img/b2.jpg" class="col-md-4 float-md-end mb-3 img-fluid" 
+            width="200px" height="50px" alt="..."
+            data-aos="fade-left"
+            data-aos-easing="linear"
+            data-aos-offset="300" 
+            data-aos-duration="1000">
+            <div class="sec2-title" style="font-family:Montserrat; padding-bottom:4%"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-offset="300" 
+            data-aos-duration="500">
               Apa itu undangan digital ?
             </div>
-            <div class="sec2-content" style="font-family: Montserrat;">
+            <div class="sec2-content" style="font-family: Montserrat;"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-offset="300" 
+            data-aos-duration="500">
               Undangan digital merupakan bentuk modern dari undangan pada umumnya.
               Dengan desain yang menarik akan membuat undangan pernikahan-mu lebih berkesan, selain itu
               dengan menggunakan undangan digital berarti kamu telah ikut membantu menjaga bumi dengan
@@ -102,10 +120,50 @@
             <div class="container">
               <div class="row">
                 <div class="col">
-                  <div class="sec3-title">
+                  <div class="sec3-title"
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-offset="300" 
+                  data-aos-duration="1000">
                     Ayo, Buat Undanganmu Sekarang!
                     <div class="button-login" style="font-family: Montserrat;">
                       <a href="<?= base_url('register'); ?>" type="button" class="btn">Buat Undangan</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="align-items: center;">
+                <div class="col-sm-4">
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<?= base_url(); ?>/img/registrasi.png" alt="Card image cap" style="width:150px; align-item:center"
+                    data-aos="zoom-in">
+                    <div class="card-body" 
+                    data-aos="fade-up" >
+                      <h5 class="card-title">Registrasi</h5>
+                      <p class="card-text">buat akun untuk dapat membuat undangan digitalmu.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<?= base_url(); ?>/img/create.png" alt="Card image cap" style="width:150px; align-item:center"
+                    data-aos="zoom-in"
+                    data-aos-duration="2000">
+                    <div class="card-body"
+                    data-aos="fade-up">
+                      <h5 class="card-title">Buat Undangan</h5>
+                      <p class="card-text">pilih tema undangan dan lengkapi data didalam undanganmu.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<?= base_url(); ?>/img/share.png" alt="Card image cap" style="width:150px; align-item:center"
+                    data-aos="zoom-in">
+                    <div class="card-body"
+                    data-aos="fade-up">
+                      <h5 class="card-title">Bagikam</h5>
+                      <p class="card-text">sebarkan link undanganmu kepada keluarga dan orang terdekatmu.</p>
                     </div>
                   </div>
                 </div>
@@ -114,6 +172,38 @@
           </div>
         </div>
       </div>
+      <!--
+      <div class="row" style="align-items: center;">
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?= base_url(); ?>/img/1.png" alt="Card image cap" style="width:150px; align-item:center">
+            <div class="card-body">
+              <h5 class="card-title">Identitas Pasangan</h5>
+              <p class="card-text">menampilkan nama mempelai, orang tua dan sosial media.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?= base_url(); ?>/img/2.png" alt="Card image cap" style="width:150px; align-item:center">
+            <div class="card-body">
+              <h5 class="card-title">Galeri</h5>
+              <p class="card-text">menampilkan foto dan video momen dari kedua mempelai</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<?= base_url(); ?>/img/3.png" alt="Card image cap" style="width:150px; align-item:center">
+            <div class="card-body">
+              <h5 class="card-title">Lokasi Acara</h5>
+              <p class="card-text">lokasi penyelnggaraan acara pernikahan, ditampilkan dalam bentuk maps </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+          
+      </div>
     </div>
   </section>
 
@@ -121,8 +211,10 @@
     <div class="website-block hero d-flex position-relative text-white text-center py-10 align-items-center">
       <div class="container py-0">
         <div class="display4-fitur">
-          <h1 class="sec3-title">Fitur Undangan Digital</h1>
-          <div class="row" style="align-items: center;">
+          <h1 class="sec3-title"
+          data-aos="fade-down">Fitur Undangan Digital</h1>
+          <div class="row" style="align-items: center;"
+          data-aos="zoom-in-up">
             <div class="col-sm-4">
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?= base_url(); ?>/img/1.png" alt="Card image cap" style="width:150px; align-item:center">
@@ -151,7 +243,8 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" 
+          data-aos="zoom-in-down">
             <div class="col-sm-4">
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="<?= base_url(); ?>/img/4.png" alt="Card image cap" style="width:150px; align-item:center">
@@ -190,7 +283,8 @@
       <div class="container py-0">
         <div class="display-tema">
           <div class="container py-2">
-            <h2 class="font-weight-light text-center text-muted py-3">Invitation Wedding Theme</h2>
+            <h2 class="font-weight-light text-center text-muted py-3" 
+            data-aos="zoom-in-down">Invitation Wedding Theme</h2>
           </div>
           <div class="container py-2">
 
@@ -214,12 +308,16 @@
               <div class="col-sm py-2">
                 <div class="card">
                   <div class="card-body">
-                    <div class="float-right text-muted small">marry.me wedding invitation</div>
+                    <div class="float-right text-muted small"
+                    data-aos="zoom-in">marry.me wedding invitation</div>
                     <a href="/Etnic-Modern" target="_blank">
-                      <img src="<?= base_url(); ?>/image/etnic.png" class="img-fluid" alt="responsive-image">
+                      <img src="<?= base_url(); ?>/image/etnic.png" class="img-fluid" alt="responsive-image"
+                      data-aos="fade-left">
                     </a>
-                    <h4 class="card-title text-muted">Etnic Modern</h4>
-                    <p class="card-text">Mengusung tema jawa dengan nuansa biru gelap, undanganmu akan terlihat mewah dan elegan.</p>
+                    <h4 class="card-title text-muted"
+                    data-aos="fade-down">Etnic Modern</h4>
+                    <p class="card-text"
+                    data-aos="fade-down">Mengusung tema jawa dengan nuansa biru gelap, undanganmu akan terlihat mewah dan elegan.</p>
                   </div>
                 </div>
               </div>
@@ -230,12 +328,16 @@
               <div class="col-sm py-2">
                 <div class="card">
                   <div class="card-body">
-                    <div class="float-right text-muted small">marry.me wedding invitation</div>
+                    <div class="float-right text-muted small"
+                    data-aos="zoom-in">marry.me wedding invitation</div>
                     <a href="/Rustic" target="_blank">
-                      <img src="<?= base_url(); ?>/image/rustic.png" class="img-fluid" alt="responsive-image">
+                      <img src="<?= base_url(); ?>/image/rustic.png" class="img-fluid" alt="responsive-image"
+                      data-aos="fade-right">
                     </a>
-                    <h4 class="card-title text-muted">Rustic</h4>
-                    <p class="card-text">Dengan nuansa coklat akan membuat tampilan undanganmu terasa hangat.</p>
+                    <h4 class="card-title text-muted"
+                    data-aos="fade-down">Rustic</h4>
+                    <p class="card-text"
+                    data-aos="fade-down">Dengan nuansa coklat akan membuat tampilan undanganmu terasa hangat.</p>
                   </div>
                 </div>
               </div>
@@ -272,12 +374,16 @@
               <div class="col-sm py-2">
                 <div class="card">
                   <div class="card-body">
-                    <div class="float-right text-muted">marry.me wedding invitation</div>
+                    <div class="float-right text-muted"
+                    data-aos="zoom-in">marry.me wedding invitation</div>
                     <a href="/Astronomy" target="_blank">
-                      <img src="<?= base_url(); ?>/image/astronomy.png" class="img-fluid" alt="responsive-image">
+                      <img src="<?= base_url(); ?>/image/astronomy.png" class="img-fluid" alt="responsive-image"
+                      data-aos="fade-left">
                     </a>
-                    <h4 class="card-title">Astronomy</h4>
-                    <p class="card-text">Tema ini menampilkan warna-warna dimalam hari , dengan taburan bintang akan membuat undanganmu terlihat sangat romantis.</p>
+                    <h4 class="card-title"
+                    data-aos="fade-down">Astronomy</h4>
+                    <p class="card-text"
+                    data-aos="fade-down">Tema ini menampilkan warna-warna dimalam hari , dengan taburan bintang akan membuat undanganmu terlihat sangat romantis.</p>
                   </div>
                 </div>
               </div>
@@ -288,12 +394,16 @@
               <div class="col-sm py-2">
                 <div class="card">
                   <div class="card-body">
-                    <div class="float-right text-muted small">marry.me wedding invitation</div>
+                    <div class="float-right text-muted small"
+                    data-aos="zoom-in">marry.me wedding invitation</div>
                     <a href="/Rose" target="_blank">
-                      <img src="<?= base_url(); ?>/image/rose.png" class="img-fluid" alt="responsive-image">
+                      <img src="<?= base_url(); ?>/image/rose.png" class="img-fluid" alt="responsive-image"
+                      data-aos="fade-right">
                     </a>
-                    <h4 class="card-title">Rose</h4>
-                    <p class="card-text">Undangan ini memiliki nuansa yang segar, dengan ornamen bunga mawar serta warna merah muda yang lembut.</p>
+                    <h4 class="card-title"
+                    data-aos="fade-down">Rose</h4>
+                    <p class="card-text"
+                    data-aos="fade-down">Undangan ini memiliki nuansa yang segar, dengan ornamen bunga mawar serta warna merah muda yang lembut.</p>
                   </div>
                 </div>
               </div>
@@ -329,12 +439,16 @@
               <div class="col-sm py-2">
                 <div class="card">
                   <div class="card-body">
-                    <div class="float-right text-muted">marry.me wedding invitation</div>
+                    <div class="float-right text-muted"
+                    data-aos="zoom-in">marry.me wedding invitation</div>
                     <a href="/Green" target="_blank">
-                      <img src="<?= base_url(); ?>/image/green.png" class="img-fluid" alt="responsive-image">
+                      <img src="<?= base_url(); ?>/image/green.png" class="img-fluid" alt="responsive-image"
+                      data-aos="fade-right">
                     </a>
-                    <h4 class="card-title">Green</h4>
-                    <p class="card-text">Tema ini menggunakan warna utama yaitu hijau, membuat undangan ini memberikan kesan yang menyenangkan namun tetap terlihat cantik.</p>
+                    <h4 class="card-title"
+                    data-aos="fade-down">Green</h4>
+                    <p class="card-text"
+                    data-aos="fade-down">Tema ini menggunakan warna utama yaitu hijau, membuat undangan ini memberikan kesan yang menyenangkan namun tetap terlihat cantik.</p>
                   </div>
                 </div>
               </div>
@@ -471,6 +585,10 @@
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>

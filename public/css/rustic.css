@@ -4,7 +4,7 @@
     height: 60px;
     bottom: 40px;
     right: 40px;
-    background-color: red;
+    background-color: #855723;
     color: #FFF;
     border-radius: 50px;
     text-align: center;
@@ -17,24 +17,25 @@
     height: 60px;
     bottom: 120px;
     right: 40px;
-    background-color: blue;
+    background-color: #855723;
     color: #FFF;
     border-radius: 50px;
     text-align: center;
     box-shadow: 2px 2px 3px #999;
 }
 
-
 .my-float {
     margin-top: 22px;
 }
 
 .float:hover {
-    background-color: white;
+    background-color: #b99c6b;
+    color: white;
 }
 
 .vol-float:hover {
-    background-color: white;
+    color: white;
+    background-color: #b99c6b;
 }
 
 /* display hero or head tittle */
@@ -360,48 +361,54 @@ iframe {
     font-weight: bolder;
 }
 
-.name {
+.name{
+    font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    color: #74583e;
+    color: #819582;
     font-weight: bold;
-    font-family: Playball;
 }
-
-.wish {
+.wish{
+    font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    color: #74583e;
+    color: #819582;
     font-weight: bold;
-    font-family: Playball;
 }
-
-.button-kirim .btn {
+.button-kirim .btn{
+    font-family: Arial, Helvetica, sans-serif;
     align-items: center;
-    background-color: white;
-    color: #74583e;
+    background-color: white;  
+    color: #23292E;
     text-decoration: none;
     width: 100px;
 }
-
-/* review guest book */
-.section8 {
-    background-image: url(../img/putih.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
+.form-control{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.display8 {
+/* section 8 : messages */
+.section8{
+    background-color: rgba(101,100,54);
+}
+.display8{
 
     min-height: 100vh;
     padding-top: 5%;
-    padding-left: 10%;
+    padding-left: 10% ;
+    text-align: left;
 }
-
-.box {
+.text-muted{
+    color: white;
+}
+.display8 .car-deck{
+    text-decoration: none;
+}
+.box{
     text-align: left;
     width: auto;
     height: 600px;
     padding: 10px;
-    color: #74583e;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
 }
 
 .box-2 {

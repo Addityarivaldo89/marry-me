@@ -259,19 +259,24 @@
                                                             <label for="">Gallery Uploaded</label><br>
                                                             <?php foreach ($gallery as $g) : ?>
                                                                 <?= csrf_field(); ?>
-                                                                <img src="/uploads/<?= $g->slug; ?>/<?= $g->gambar; ?>" alt="" width="20%">
-                                                                <form action="/gallery/<?= $g->id; ?>" method="post" class="d-inline mr-3">
-                                                                    <i class="fas fa-arrow-right"></i>
-                                                                    <input type="hidden" name="_method" value="DELETE">
-                                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>
-                                                                </form>
+                                                                <?php if ($g->gambar != null) { ?>
+                                                                    <img src="/uploads/<?= $g->slug; ?>/<?= $g->gambar; ?>" alt="" width="20%">
+                                                                    <form action="/gallery/<?= $g->id; ?>" method="post" class="d-inline mr-3">
+                                                                        <i class="fas fa-arrow-right"></i>
+                                                                        <input type="hidden" name="_method" value="DELETE">
+                                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>
+                                                                    </form>
+                                                                <?php } else ?>
                                                             <?php endforeach; ?>
                                                         </div>
                                                         <div class="form-group">
                                                             <?php foreach ($video as $v) : ?>
 
                                                                 <label for="">Link Youtube</label>
-                                                                <input type="text" class="form-control" value="https://youtu.be/<?= (old('link_youtube')) ? old('link_youtube') : $v->link_youtube; ?>" disabled>
+                                                                <?php if ($v->link_youtube != null) { ?>
+                                                                    <input type="text" class="form-control" value="https://www.youtube.com/<?= (old('link_youtube')) ? old('link_youtube') : $v->link_youtube; ?>" disabled>
+                                                                    <small id="" class="form-text text-muted">Link Youtube yang bisa didaftarkan <b>hanya 1</b>, dimohon untuk tidak <b>mendaftarkannya lagi</b> </small>
+                                                                <?php } else ?>
                                                             <?php endforeach; ?>
                                                         </div>
                                                     </div>

@@ -1,43 +1,48 @@
-
 /* section1 : hero (cover) */
-.section1{
-    background-image: linear-gradient(rgba(233,228,225, 0.8),transparent) ,url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
+.section1 {
+    background-image: linear-gradient(rgba(233, 228, 225, 0.8), transparent), url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.display1-hero{
+
+.display1-hero {
     min-height: 100vh;
     padding: 3% 3%;
     padding-top: 15%;
 }
-.hero-content .title{
+
+.hero-content .title {
     font-family: Montserrat;
     font-size: 45pt;
     text-align: center;
     color: #C7866A;
 }
-.hero-content .sub-title{
+
+.hero-content .sub-title {
     font-size: 15pt;
     font-weight: bolder;
     color: #819582;
 }
 
 /* sectio2: description */
-.section2{
+.section2 {
     background-color: #EAD3C5;
 }
-.display2-description{
+
+.display2-description {
     min-height: 60vh;
     margin-top: 8%;
     padding: 3% 3%;
 }
-.sec2-title{
+
+.sec2-title {
     font-family: Montserrat;
     color: #C7866A;
     text-align: left;
     font-size: 30pt;
 }
-.sec2-content{
+
+.sec2-content {
     font-family: Montserrat;
     text-align: left;
     color: #656436;
@@ -45,59 +50,71 @@
 }
 
 /* section3 : button */
-.section3{
-    background-image: linear-gradient(rgba(233,228,225, 0.8),transparent) ,url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
+.section3 {
+    background-image: linear-gradient(rgba(233, 228, 225, 0.8), transparent), url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.display3-button{
-    min-height: 10h;
-    padding: 2% 1%;
+
+.display3-button {
+    min-height: 100vh;
+    padding: 5% 1%;
 }
-.sec3-title{
+
+.sec3-title {
     color: #C7866A;
     font-family: Montserrat;
     font-size: 40px;
     text-align: right;
+    font-weight: bold;
 }
 
-.section4{
+.section4 {
     background-color: #EAD3C5;
 }
-.display4-fitur{
+
+.display4-fitur {
     max-height: 100%;
     padding: 3% 3%;
 }
-.sec3-title{
+
+.sec3-title {
     text-align: center;
     font-family: Comfortaa;
     color: #85856f;
     font-weight: bold;
     padding-bottom: 5%;
 }
-.card{
+
+.card {
     background-color: transparent;
     border: none;
     font-family: Comfortaa;
     text-align: center;
     align-items: center;
 }
-.card-title{
+
+.card-title {
     color: #85856f;
     font-weight: bolder;
 }
-.card-text{
+
+.card-text {
     font-weight: bolder;
     color: #C7866A;
 }
-.row{
-    align-items: center ;
+
+.row {
+    align-items: center;
 }
 
-.section5{
-    background-image: linear-gradient(rgba(233,228,225, 0.8),transparent) ,url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
+.section5 {
+    background-image: linear-gradient(rgba(233, 228, 225, 0.8), transparent), url(../img/Download\ premium\ image\ of\ White\ crinkled\ paper\ texture\ background\ 2431346.jpeg);
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
-.display-tema{
+
+.display-tema {
     max-height: 100%;
     padding: 3% 3%;
 }

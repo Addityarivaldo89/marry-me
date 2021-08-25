@@ -144,12 +144,12 @@
                             <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
                             <input type="text" class="mt-1" name="alamat_akad" placeholder="Jl. Kenangan" />
                             <input type="time" name="akad_time" placeholder="" />
-                            <input type="date" name="akad_date" placeholder="" />
+                            <input type="datetime-local" name="akad_date" placeholder="" />
                             <h2 class="fs-title">Lokasi Resepsi Nikah</h2>
                             <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
                             <input type="text" class="mt-1" name="alamat_resepsi" placeholder="Jl. Kenangan" />
                             <input type="time" name="resepsi_time" placeholder="" />
-                            <input type="date" name="resepsi_date" placeholder="" />
+                            <input type="datetime-local" name="resepsi_date" placeholder="" />
                           </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /><input type="button" name="next" class="next action-button" value="Next Step" />
                         </fieldset>
                         <fieldset>

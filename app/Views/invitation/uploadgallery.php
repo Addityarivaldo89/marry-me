@@ -36,14 +36,12 @@
                             <div class="form-group">
                                 <label for="">Link Video Pre-Wedding</label>
 
+                                <input type="link" class="form-control" name="link_youtube">
                                 <?php foreach ($video as $v) : ?>
-                                    <input type="link" class="form-control" name="link_youtube" value="https://www.youtube.com/<?= (old('link_youtube')) ? old('link_youtube') : $v->link_youtube ?>">
+                                    <small id="" class="form-text text-muted">Link Videomu yang sudah terdaftar di sistem https://youtu.be/<b><?= (old('link_youtube')) ? old('link_youtube') : $v->link_youtube ?></b></small>
                                 <?php endforeach; ?>
-                                <?php
 
-                                ?>
-                                <!-- <input type="link" class="form-control" name="link_youtube"> -->
-                                <small id="" class="form-text text-muted">Upload Videomu di Youtube terlebih dahulu <br> Contoh :
+                                <small id="" class="form-text text-muted mt-5">Upload Videomu di Youtube terlebih dahulu <br> Contoh :
                                     https://youtu.be/<b>iT44pZmor3o</b> <br> Perhatikan Huruf yang dicetak tebal</small>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>

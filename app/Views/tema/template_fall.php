@@ -264,20 +264,20 @@
                         <?= csrf_field(); ?>
 
                         <?php foreach ($link as $d) : ?>
-                            <input type="hidden" name="id_users" value="<?= user()->id; ?>">
+                            <input type="hidden" name="id_users" value="<?= $d->id_users; ?>">
                             <input type="hidden" name="slug" value="<?= (old('slug')) ? old('slug') : $d->slug ?>">
                         <?php endforeach; ?>
 
                         <div class="form-group">
                             <div class="name"><label for="name">Nama Tamu</label></div>
-                            <input type="text" name="nama_tamu" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Nama Anda">
+                            <input type="text" name="nama_tamu" placeholder="Masukkan Nama Anda" class="form-control" id="exampleFormControlInput1">
                         </div>
                         <div class="form-group">
                             <div class="wish"><label for="exampleFormControlTextarea1">Pesan untuk kedua mempelai</label></div>
-                            <textarea name="pesan" class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
+                            <input type="text" name="pesan" class="form-control" id="exampleFormControlTextarea1" rows="9"></input>
                         </div>
                         <div class="button-kirim">
-                            <button type="submit" class="btn">Kirim</button>
+                            <button type="submit" class="btn btn-primary">Kirim</button>
                         </div>
                     </form>
 

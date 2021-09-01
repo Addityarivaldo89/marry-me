@@ -68,8 +68,8 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Tanggal Pernikahan</label>
-                                                    <input type="date" class="form-control" name="akad_date" value="<?= (old('akad_date')) ? old('akad_date') : $d->akad_date ?>">
-                                                    <small id="" class="form-text text-muted">Bisa Tanggal Pernikahan, contoh : 25 . 01 . 2025</small>
+                                                    <input type="datetime-local" class="form-control" name="akad_date" value="<?= (old('akad_date')) ? old('akad_date') : $d->akad_date ?>">
+                                                    <small id="" class="form-text text-muted">Silahkan sesuaikan formatnya seperti ini, <b>2021-08-22 10:00:00</b></small>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Sub Judul</label>
@@ -191,13 +191,18 @@
                                                 <div class="form-group">
                                                     <label for="">Alamat Akad Nikah</label>
                                                     <input type="text" class="form-control" name="alamat_akad" value="<?= (old('alamat_akad')) ? old('alamat_akad') : $d->alamat_akad ?>">
-                                                    <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
+                                                    <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah(berupa nama jalan & no rumah) dengan sesuai agar dapat dengan mudah ditemukan
+                                                        <ul>
+                                                            <li>Contoh nama gedung : <b>Ballroam Hotel Harris Summarecon</b></li>
+                                                            <li>Contoh alamat rumah : <b>Jalan Flamboyan raya 2 no 58</li>
+                                                        </ul>
+                                                    </small>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="row">
                                                         <div class="col">
                                                             <label for="">Tanggal Akad Nikah</label>
-                                                            <input type="date" class="form-control" name="akad_date" value="<?= (old('akad_date')) ? old('akad_date') : $d->akad_date ?>">
+                                                            <input type="datetime-local" class="form-control" name="akad_date" value="<?= (old('akad_date')) ? old('akad_date') : $d->akad_date ?>">
                                                             <small id="" class="form-text text-muted">Masukkan Tanggal akad nikah</small>
                                                         </div>
                                                         <div class="col">
@@ -211,19 +216,24 @@
                                                 <div class="form-group">
                                                     <label for="">Alamat Resepsi</label>
                                                     <input type="text" class="form-control" name="alamat_resepsi" value="<?= (old('alamat_resepsi')) ? old('alamat_resepsi') : $d->alamat_resepsi ?>">
-                                                    <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah dengan sesuai agar dapat dengan mudah ditemukan</small>
+                                                    <small id="" class="form-text text-muted">Masukkan nama gedung dan/atau alamat rumah(berupa nama jalan & no rumah) dengan sesuai agar dapat dengan mudah ditemukan
+                                                        <ul>
+                                                            <li>Contoh nama gedung : <b>Ballroam Hotel Harris Summarecon</b></li>
+                                                            <li>Contoh alamat rumah : <b>Jalan Flamboyan raya 2 no 58</li>
+                                                        </ul>
+                                                    </small>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="row">
                                                         <div class="col">
                                                             <label for="">Tanggal Resepsi</label>
-                                                            <input type="date" class="form-control" name="resepsi_date" value="<?= (old('resepsi_date')) ? old('resepsi_date') : $d->resepsi_date ?>">
+                                                            <input type="datetime-local" class="form-control" name="resepsi_date" value="<?= (old('resepsi_date')) ? old('resepsi_date') : $d->resepsi_date ?>">
                                                             <small id="" class="form-text text-muted">Masukkan Tanggal resepsi</small>
                                                         </div>
                                                         <div class="col">
                                                             <label for="">Jam Resepsi</label>
                                                             <input type="time" class="form-control" name="resepsi_time" value="<?= (old('resepsi_time')) ? old('resepsi_time') : $d->resepsi_time ?>">
-                                                            <small id="" class="form-text text-muted">Masukkan nama Jam resepsi</small>
+                                                            <small id="" class="form-text text-muted">Masukkan Jam resepsi</small>
                                                         </div>
                                                     </div>
 

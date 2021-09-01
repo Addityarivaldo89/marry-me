@@ -135,7 +135,7 @@ class Invitation extends BaseController
             return redirect()->to('/pengaturan');
         }
     }
-    
+
 
     public function saveMusic()
     {
@@ -300,11 +300,6 @@ class Invitation extends BaseController
             }
 
             $slug = url_title($this->request->getVar('couple_name'), '-', true);
-            $data = [
-                'slug' => $slug,
-                'id_users' => $this->request->getVar('id_users')
-            ];
-            $this->galleryModel->save($data);
             $this->invitationModel->save([
                 'id_inv' => $this->request->getVar('id_inv'),
                 'id_users' => $this->request->getVar('id_users'),
